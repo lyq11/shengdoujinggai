@@ -1,0 +1,68 @@
+/* pages/Home/search/search.wxss */
+page{
+  background-color: #fff;
+}
+.search{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #1296db;
+  overflow: hidden;
+}
+.tex{
+  color: #fff;
+  position: relative;
+  top: -153rpx;
+  right: -643rpx;
+  font-size: 40rpx;
+}
+.searchInp{
+  width: 500rpx;
+  font-size: 35rpx;
+  margin:0 auto;
+  height: 60rpx;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+  border-radius: 15rpx;
+  padding-left: 60rpx;
+  background-color: #fff;
+}
+.inputImg{
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  left: 58rpx;
+  top: -60rpx;
+}
+.tue,.card{
+  display: flex;
+  flex-direction: row;
+}
+.tue{
+  margin-top: 10rpx;
+}
+.tueL{
+  margin-left: 50rpx;
+}
+.card{
+  color: rgb(151, 151,151);
+  height: 200rpx;
+  background-color: #fff;
+  border-bottom:2rpx solid #000;
+  margin-top: 10rpx;
+  padding-left: 20rpx;
+  position: relative;
+}
+.itemName{
+  font-size: 40rpx;
+  color: #000;
+  margin-top: 20rpx;
+}
+.detail{
+  height: 200rpx;
+  line-height: 200rpx;
+  font-size: 40rpx;
+  position: absolute;
+  right: 50rpx;
+  top: 0rpx;
+}

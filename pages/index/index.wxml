@@ -1,0 +1,40 @@
+<!--index.wxml-->
+  <view class="top">
+    <label class="title">
+      嗨,您好
+    </label>
+    <label class="title" for="">
+      欢迎来到圣豆智慧井盖小程序
+    </label>
+
+  </view>
+  <view class="mid">
+  <form bindsubmit="formSubmit" bindreset="">
+    <view class="login">
+      <input name="usernmame"class="username" value="" type="text" placeholder="用户名/手机号" placeholder-style="" placeholder-class="input-placeholder" bindinput="checkusername">
+
+      </input>
+      <input name="password" class="password" value="" type="text" password="true" placeholder="密码" placeholder-style="" placeholder-class="input-placeholder-ps" >
+
+      </input>
+      <view class="nbviwew">
+        <input name="vacode" class="code" value="" type="text" placeholder="验证码" placeholder-style="" placeholder-class="input-placeholder-code">
+
+        </input>
+        <button disabled="{{can == null ? 'disabled': ''}}{{count != '60' ? 'disabled': ''}}" size="mini" class="getcode" bindtap="sendcode">
+        {{count != '60' ? '等待'+count+'秒' : '发送验证码'}}
+        </button>
+
+      </view>
+    </view>
+    
+<button form-type="submit" class="subbt" bindtap="">登录</button>
+</form>
+<view class="more">
+  <label style="margin-right: 10rpx;">忘记密码</label>
+  <label>|</label>
+  <label style="margin-left: 10rpx;" bindtap="register">手机验证登录</label>
+  </view>
+  <button type="primary">微信一键登录</button>
+  </view>
+

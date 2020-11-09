@@ -1,0 +1,22 @@
+<!--miniprogram/pages/share/share_internal.wxml-->
+<view class="page_index">
+<view class="pic_title">
+<image class="pic" src="" mode="aspectFit" lazy-load="false" binderror="" bindload="" />
+<label class="title" >
+    设备小二二
+</label>
+  
+
+</view>
+<view class="subview">
+ <input bindinput="input" class="weui-input" focus="true" placeholder="手机号/圣豆ID"/>
+  
+<button bindtap="subbt" class="default" size="default" type="primary">
+    提交
+</button>
+  
+        
+</view>
+  
+</view>
+  

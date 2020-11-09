@@ -1,0 +1,60 @@
+<!--miniprogram/pages/Devices/deviceDetail/deviceDetail.wxml-->
+<view class="backgroud">
+<wxs src="../../../utils/state.wxs" module="state"/>
+  <mp-cells ext-class="my-cells" title="基本信息" >
+    <mp-cell value="设备名称" footer="{{currentdevice.name}}">
+      <image slot="title" class="iconfont icon-IOTtubiao_huabanfuben7" style="margin-right: 10px;vertical-align: middle;width:100%; height: 100%;color: black;font-size: 3vh;"></image>
+    </mp-cell>
+    <mp-cell value="设备类型" footer="{{currenttype.type_name}}">
+       <image slot="title" class="iconfont icon-fenlei " style="margin-right: 10px;vertical-align: middle;width:100%; height: 100%;color: black;font-size: 3vh;"></image>
+    
+    </mp-cell>
+    <mp-cell value="设备单位" footer="{{currentdevice.co_id}}">
+       <image slot="title" class="iconfont icon-pinpai " style="margin-right: 10px;vertical-align: middle;width:100%; height: 100%;color: black;font-size: 3vh;"></image>
+    
+    </mp-cell>
+    <mp-cell value="设备ID" footer="{{currentdevice.device_uni_id}}">
+       <image slot="title" class="iconfont icon-ICqia" style="margin-right: 10px;vertical-align: middle;width:100%; height: 100%;color: black;font-size: 3vh;"></image>
+    
+    </mp-cell>
+    <mp-cell value="设备状态" footer="{{state.onlineinput(currentdevice.device_isonline).name}}">
+       <image slot="title" class="iconfont icon-jinggai" style="margin-right: 10px;vertical-align: middle;width:100%; height: 100%;color: black;font-size: 3vh;"></image>
+    
+    </mp-cell>
+    <mp-cell value="预警状态" footer="{{state.stateinput(currentdevice.warning_status).name}}">
+       <image slot="title" class="iconfont icon-zhanghuyichang" style="margin-right: 10px;vertical-align: middle;width:100%; height: 100%;color: black;font-size: 3vh;"></image>
+    
+    </mp-cell>
+    <mp-cell value="pcb_ver" footer="{{currentdevice.pcb_ver}}">
+       <image slot="title" class="iconfont icon-xinxifabu " style="margin-right: 10px;vertical-align: middle;width:100%; height: 100%;color: black;font-size: 3vh;"></image>
+    
+    </mp-cell>
+    <mp-cell value="firmware_var" footer="{{currentdevice.firmware_var}}">
+       <image slot="title" class="iconfont icon-xinxifabu" style="margin-right: 10px;vertical-align: middle;width:100%; height: 100%;color: black;font-size: 3vh;"></image>
+    
+    </mp-cell>
+  </mp-cells>
+  <mp-cells ext-class="my-cells" title="设备信息">
+    <mp-cell wx:for="{{deviceProp}}" value="{{item.key}}" footer="{{state.openinput(item.value).name}}">
+       <image slot="title" class="iconfont icon-right" style="margin-right: 10px;vertical-align: middle;width:100%; height: 100%;color: black;font-size: 3vh;"></image>
+    
+    </mp-cell>
+  </mp-cells>
+  <view class='tabview'>
+    <view wx:if="{{currenttype.type_name == '智能井盖'}}">
+    <map id="map"  subkey = "Y6MBZ-FJRCF-MHNJO-NETUQ-NNUJZ-HZFNR" layer-style="1" markers="{{markers}}" longitude="{{currentdevice.device.device_longitute}}" latitude="{{currentdevice.device.device_latitue}}" scale="14"  enable-zoom="false" enable-scroll="false" show-location style="width: 100%; height: 800rpx;"></map>
+    </view>
+  </view>
+</view>
+<view class="buttonview">
+
+  <button class="btn3" type="mini" data-id="{{currentdevice.device_uni_id}}" bindtap="gotoSetting">
+    <image class='btnImg' src='../../../img/shezhi.png'></image>
+    设置</button>
+  <button class="btn2" type="mini" data-id="{{currentdevice.device_uni_id}}" bindtap="submitcancel" disabled="{{currentdevice.warning_status == 0 ? true:false}}">
+    <image class='btnImg' src='../../../img/yujing-3.png'></image>
+    清除预警</button>
+  <button class="btn1" type="mini" data-id="{{currentdevice.device_uni_id}}" bindtap="unlock">
+    <image class='btnImg' src='../../../img/share_icon.png'></image>
+    开锁</button>
+</view>

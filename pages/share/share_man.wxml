@@ -1,0 +1,8 @@
+<view>
+  <mp-cells class="share_w" title="设备 {{device.name}} 已共享给">
+    <mp-slideview  data-sd= "" wx:for="{{list}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+      <mp-cell  value="{{item.get_users[0].name}}." footer="已同意于{{item.created_at}}"></mp-cell>
+    </mp-slideview>
+  </mp-cells>
+  
+</view>

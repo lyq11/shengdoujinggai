@@ -1,0 +1,23 @@
+/* miniprogram/pages/me/information/information.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+
+}
+.list_view{
+  background-color: green;
+border-radius: 20rpx;
+margin-top: 15rpx;
+min-height: 160rpx;
+margin-left: 15rpx;
+margin-right: 15rpx;
+display: flex;
+align-items: center;
+
+}
+
+.list_view_lable{
+color: white;
+margin-left: 60px;
+
+}

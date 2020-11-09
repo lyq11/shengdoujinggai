@@ -1,0 +1,16 @@
+<view class="vies">
+<mp-cells class="share_m" title="">
+  <mp-cell link hover value="共享管理" bindtap= "gotoMan" footer="">
+    <image slot="title" src="{{icon}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+  </mp-cell>
+</mp-cells>
+
+<mp-cells class="share_w" title="">
+  <mp-cell link hover bindtap="gotointernal" value="圣豆账号" footer="">
+    <image slot="title" src="{{icon}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+  </mp-cell>
+  <mp-cell link url="../index" value="微信好友" footer="">
+    <image slot="icon" src="{{icon}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+  </mp-cell>
+</mp-cells>
+</view>

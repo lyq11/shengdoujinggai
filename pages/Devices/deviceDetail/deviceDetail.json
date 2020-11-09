@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "ff-canvas": "@antv/f2-canvas"
+  },
+  "navigationBarBackgroundColor": "#1296db",
+  "navigationBarTitleText": "设备详情",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": false
+}

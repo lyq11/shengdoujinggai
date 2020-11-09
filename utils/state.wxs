@@ -1,0 +1,156 @@
+var onlineinput = function(value) {
+  switch (value) {
+    case "1":
+      return {
+        name: "在线",
+        style:
+          "color:#7ec989;border-radius: 8rpx;border: 1rpx solid #7ec989;padding-left: 5px;padding-right: 5rpx;",
+      };
+      break;
+    case "2":
+      return {
+        name: "休眠",
+        style:
+          "color:rgba(202, 86, 241, 1.000);border-radius: 8rpx;border: 1rpx solid rgba(202, 86, 241, 1.000);padding-left: 5px;padding-right: 5rpx;"
+      };
+      break;
+    case "0":
+      return {
+        name: "离线",
+        style:
+          "color:gray;border-radius: 8rpx;border: 1rpx solid gray;padding-left: 5px;padding-right: 5rpx;"
+      };
+      break;
+    default:
+      return {
+        name: "未知",
+        style:
+          "color:red;border-radius: 8rpx;border: 1rpx solid red;padding-left: 5px;padding-right: 5rpx;"
+      };
+      break;
+  }
+};
+var stateinput = function(value) {
+  switch (value) {
+    case "1":
+      return {
+        name: "预警",
+        style:
+          "color:yellow;border-radius: 8rpx;border: 1rpx solid yellow;padding-left: 5px;padding-right: 5rpx;"
+      };
+      break;
+    case "2":
+      return {
+        name: "警告",
+        style:
+          "color:red;border-radius: 8rpx;border: 1rpx solid red;padding-left: 5px;padding-right: 5rpx;"
+      };
+      break;
+    case "0":
+      return {
+        name: "正常",
+        style:
+          "color:lightgray;border-radius: 8rpx;border: 1rpx solid lightgray;padding-left: 5px;padding-right: 5rpx;"
+      };
+      break;
+    default:
+      return {
+        name: "未知",
+        style:
+          "color:red;border-radius: 8rpx;border: 1rpx solid red;padding-left: 5px;padding-right: 5rpx;"
+      };
+      break;
+  }
+};
+
+var openinput = function(value) {
+  switch (value) {
+    case "1":
+      return {
+        name: "是",
+        style:
+          "color:yellow;border-radius: 8rpx;border: 1rpx solid yellow;padding-left: 5px;padding-right: 5rpx;"
+        , icon: "icon-qiaosuo-kaiqi"
+      };
+      break;
+    case "0":
+      return {
+        name: "否",
+        style:
+          "color:red;border-radius: 8rpx;border: 1rpx solid lig;padding-left: 5px;padding-right: 5rpx;",
+        icon: "icon-qiaosuo-kaiqi"
+      };
+      break;
+    default:
+      return {
+        name: value,
+        style:
+          "color:red;border-radius: 8rpx;border: 1rpx solid red;padding-left: 5px;padding-right: 5rpx;",
+        icon: "icon-qiaosuo-kaiqi"
+      };
+      break;
+  }
+};
+var lockerstatus = function (value) {
+  switch (value) {
+    case "1":
+      return {
+        name: "是",
+        style:
+          "color:yellow;border-radius: 8rpx;border: 1rpx solid yellow;padding-left: 5px;padding-right: 5rpx;"
+        , icon: "icon-qiaosuo-kaiqi"
+      };
+      break;
+    case "0":
+      return {
+        name: "否",
+        style:
+          "color:red;border-radius: 8rpx;border: 1rpx solid lig;padding-left: 5px;padding-right: 5rpx;",
+        icon: "icon-qiaosuo"
+      };
+      break;
+    default:
+      return {
+        name: value,
+        style:
+          "color:red;border-radius: 8rpx;border: 1rpx solid red;padding-left: 5px;padding-right: 5rpx;",
+        icon: "icon-qiaosuo-kaiqi"
+      };
+      break;
+  }
+};
+var coveropen = function (value) {
+  switch (value) {
+    case "1":
+      return {
+        name: "是",
+        style:
+          "color:yellow;border-radius: 8rpx;border: 1rpx solid yellow;padding-left: 5px;padding-right: 5rpx;"
+        , icon: "icon-IOTtubiao_huabanfuben18"
+      };
+      break;
+    case "0":
+      return {
+        name: "否",
+        style:
+          "color:red;border-radius: 8rpx;border: 1rpx solid lig;padding-left: 5px;padding-right: 5rpx;",
+        icon: "icon-22"
+      };
+      break;
+    default:
+      return {
+        name: value,
+        style:
+          "color:red;border-radius: 8rpx;border: 1rpx solid red;padding-left: 5px;padding-right: 5rpx;",
+        icon: "icon-qiaosuo-kaiqi"
+      };
+      break;
+  }
+};
+module.exports = {
+  onlineinput: onlineinput,
+  stateinput: stateinput,
+  openinput:openinput,
+  lockerstatus: lockerstatus,
+  coveropen: coveropen
+};

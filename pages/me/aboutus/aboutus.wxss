@@ -1,0 +1,4 @@
+/* pages/me/aboutus/aboutus.wxss */
+page{
+  background-color: #fff;
+}

@@ -1,0 +1,15 @@
+<!--miniprogram/pages/Devices/addDevice/addDevice.wxml-->
+<view class="regpage">
+  <mp-cells title="请输入设备ID及设备密码进行添加">
+    <mp-cell show-error prop="idcard" title="设备序列号" ext-class="">
+      <input bindinput="formInputChange" data-field="id" class="weui-input input-buti" placeholder="请输入序列号" />
+    </mp-cell>
+    <mp-cell show-error prop="idcard" title="设备验证码" ext-class="">
+      <input bindinput="formInputChange" data-field="pw" class="weui-input input-buti" placeholder="请输入验证码" />
+    </mp-cell>
+  </mp-cells>
+  <view class="weui-btn-area">
+   <button class="weui-btn" type="primary" bindtap="cancel">返回</button>
+            <button class="weui-btn" type="primary" bindtap="subm">确定</button>
+        </view>
+</view>

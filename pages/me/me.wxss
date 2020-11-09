@@ -1,0 +1,184 @@
+/* pages/user/user.wxss */
+.page{
+  background-color:#ccc;
+}
+.me{
+  height: 100%;
+}
+.order_status{
+  display:flex;
+
+}
+.weui-cell {
+background: #fff !important;
+border-top: 1rpx solid rgba(58, 58, 61, 1.000);
+color: #000;
+
+}
+
+.mine{
+width: 750;
+border-radius: 20rpx;
+margin-top: -93rpx;
+z-index: 2;
+position: relative;
+
+margin-left: 25rpx;
+margin-right: 25rpx;
+margin-bottom: 120rpx;
+
+}
+.news{
+  width: 750;
+height: 115rpx;
+border-radius: 18rpx;
+margin-top: -93rpx;
+z-index: 2;
+position: relative;
+background: rgb(247, 247, 247);
+margin-left: 25rpx;
+margin-right: 25rpx;
+margin-bottom: 120rpx;
+display: flex;
+color: #000;
+
+}
+.list_button:after{
+border:none;
+background:none;
+
+}
+.list_button{
+border:none;
+background:none;
+font-size:30rpx;
+
+}
+.listbuttonimage {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 35rpx;
+}
+.my-cells{
+  margin-left: 5rpx;
+margin-right: 5rpx;
+
+}
+.lists{
+width:750;
+border-radius:20rpx;
+margin-top:-93rpx;
+z-index:2;
+position:relative;
+margin-left:25rpx;
+margin-right:25rpx;
+margin-bottom: 120rpx;
+background: #ccc;
+
+}
+.lis{
+margin-bottom: -1rpx;
+}
+.userinfo{
+  position: relative;
+  width: 750rpx;
+  height: 416rpx;
+  background: #1296db;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius:0rpx 0rpx 40rpx 40rpx;
+
+}
+.myordertitle{
+margin-top:20rpx;
+padding-bottom:9px;
+margin-left:0;
+padding-left:40rpx;
+padding-top:20rpx;
+font-size:30rpx;
+}
+.userinfo-avatar {
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+
+  border:2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 14px;
+}
+
+.sc{
+  background: #fff;
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666;
+  padding: 4% 0;
+
+  padding-top: 47rpx;
+}
+.sc image{
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+.bte{
+  border-top: 1px solid #eee;
+}
+.qbdd{
+  background: #fff;
+  width: 92%;
+  font-size: 12px;
+  color: #666;
+  padding: 4%;
+  border-bottom: 1px solid #eee;
+  height:30rpx;
+}
+
+.c33{
+  float: left;
+  color: #000
+}
+
+contact-button{
+  position: relative;
+  left:-50px;
+  opacity: 0;
+}
+.state{
+  float:left;
+  border-right: 1rpx solid gray;
+  width:136rpx;
+  text-align: center;
+}
+.row{
+  background-color: white;
+  height: 100rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1rpx solid #d3d3d3;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.select{
+  margin-left: 25rpx;
+  margin-right: 50rpx;
+}
+.sharepic{
+border:1rpx solid red;
+border-radius:27rpx;
+background:red;
+color:white;
+font-size:20rpx;
+padding:5rpx;
+
+}

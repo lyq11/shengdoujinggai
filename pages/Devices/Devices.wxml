@@ -1,0 +1,25 @@
+<!--miniprogram/pages/Devices/Devices.wxml-->
+<view class="pags {{devicelists == ''? 'pages' : ''}}">
+<view wx:if="{{devicelists == ''}}" class="text-btn-area">
+<icon type="info" size="60"/>
+<label class="text-show">当前没有任何设备</label>
+</view>
+<view class="btn-area">
+<button class="we-btn" size="mini" type="primary" bindtap="adddevice">扫一扫添加设备</button>
+<button class="we-btn" size="mini" type="primary" bindtap="add_device">手动添加设备</button>
+</view>
+  <view wx:for="{{devicelists}}" wx:key="index" bindtap = "jumpto"  data-typeid= "{{item.id}}" class='cards'>
+  <view class="imgview">
+  <image wx:if='{{item.type_img_id}}' style="width: 200rpx; height: 200rpx" class="CoverImg" src="{{item.type_img_id}}" mode="aspectFit">
+          </image>
+          </view>
+    <view class="card-line-1">
+      <label class="title">{{item.type_name}}</label>
+      <label class="card-line-title">设备总数：{{item.total}}</label>
+      <label class="card-line-title">在线设备：{{item.online}}</label>
+       <label class="card-line-title">离线设备：{{item.total - item.online}}</label>
+    </view>
+  </view>
+
+
+</view>

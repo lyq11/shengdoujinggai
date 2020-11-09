@@ -1,0 +1,16 @@
+/* miniprogram/pages/Devices/addDevice/addDevice.wxss */
+.input-buti{
+  margin-left: 10rpx;
+
+}
+.regpage{
+  color: white !important;
+}
+.weui-cells__title{
+  color: white;
+}
+.weui-cell{
+  background: #2a2a2a !important;
+  border-top: 1rpx solid rgba(58, 58, 61, 1.000);
+
+}

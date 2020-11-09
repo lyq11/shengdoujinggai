@@ -1,0 +1,20 @@
+var funs = function(e) {
+  var count = e.Property_count;
+  var list = [];
+
+  for (var i = 1; i <= count; i++) {
+    var temp = {};
+    (temp["id"] = e["Property_" + i + "_id"]),
+      (temp["name"] = e["Property_" + i + "_name"]),
+      (temp["type"] = e["Property_" + i + "_type"]),
+      (temp["method"] = e["Property_" + i + "_method"]),
+      (temp["object"] = e["Property_" + i + "_object"]),
+      (temp["edit"] = e["Property_" + i + "_edit"]),
+      (temp["isnotiy"] = e["Property_" + i + "_isnotiy"]);
+    list.push(temp);
+  }
+  return list;
+};
+module.exports = {
+  funs: funs
+};

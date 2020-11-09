@@ -1,0 +1,6 @@
+/* miniprogram/pages/Devices/deviceDetail/canvasD/canvasD.wxss */
+
+#pieSelect {
+  width: 600rpx;
+  height: 500rpx;
+}

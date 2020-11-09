@@ -1,0 +1,161 @@
+/* miniprogram/pages/Devices/deviceDetail/deviceDetail.wxss */
+Page{
+  background-color: rgba(243, 152, 1, 1);
+}
+
+.buttonview{
+  position: fixed;
+  bottom: 0;
+  background-color:rgba(58, 58, 61, 1.000);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 7vh;
+}
+
+.tabview {
+  height: 800rpx;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: -90rpx;
+  z-index: -1;
+
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleSel {
+  color:white;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2rpx solid #2793ee;
+min-width: 20%;
+background-color: rgba(36, 178, 206, 0.2000);
+
+}
+.weui-cells__title{
+  color:white !important;
+  font-size: 35rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx 0; 
+}
+
+.weui-cell{
+  background: #fff !important;
+  border-top: 1rpx solid rgba(58, 58, 61, 1.000);
+
+}
+.weui-cell__bd{
+  color:black !important;
+}
+.weui-cell__ft{
+  color:#222 !important;
+}
+.titleUnsel {
+  color: #2793ee;
+  min-width: 20%;
+font-size: 32rpx;
+border: 2rpx solid #2793ee;
+  font-size: #858fab;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Sel {
+  background: #5f6fee;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  /* margin-top: 10rpx; */
+}
+
+.Unsel {
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  
+}
+
+.swiper {
+  width: 100%;
+  flex: 1;
+  height:100vh;
+  overflow: scroll;
+}
+
+.recordItem {
+  margin-top: 10rpx;
+  background-color: white;
+  padding-bottom: 20rpx;
+}
+.btn1 {
+width: 195rpx !important;
+margin-top: 10rpx;
+background-color: white;
+color: #2793ee;
+border-radius: 98rpx;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin-bottom: 10rpx;
+font-size: 10pt;
+border: 1rpx solid #2793ee;
+font-weight: 200;
+}
+.btn2 {
+ width: 260rpx !important;
+margin-top: 10rpx;
+background-color: #2793ee;
+color: white;
+border-radius: 98rpx;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin-bottom: 10rpx;
+font-size: 10pt;
+font-weight: 200;
+}
+.btn3 {
+width: 195rpx !important;
+margin-top: 10rpx;
+background-color: white;
+color: black;
+border-radius: 98rpx;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin-bottom: 10rpx;
+font-size: 10pt;
+
+font-weight: 200;
+}
+.btnImg {
+  margin-right: 8rpx;
+  width: 35rpx;
+height: 35rpx;
+
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}
+.my-cells{
+  margin-top: -20rpx;
+}

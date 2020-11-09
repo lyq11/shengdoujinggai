@@ -1,0 +1,8 @@
+        <mp-cells title="新消息提示跟摘要信息后，统一在列表右侧">
+            <mp-cell title="{{item.name}}" link wx:for="{{list}}" url="../information/informationDetails/informationDetails?id={{item.id}}">
+                <view slot="footer">
+                    <view style="display: inline-block;vertical-align:middle; font-size: 17px;">有新消息</view>
+                    <mp-badge style="margin-left: 5px;margin-right: 5px;" ext-class="blue"/>
+                </view>
+            </mp-cell>
+        </mp-cells>

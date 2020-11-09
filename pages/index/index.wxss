@@ -1,0 +1,143 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-placeholder-ps{
+
+}
+.input-placeholder{
+
+}
+.input-placeholder-code{
+
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+page{
+   display: flex;
+flex-direction: column;
+background-color: #f4f4f4;
+height: 750rpx;
+}
+.container2 {
+ display: flex;
+flex-direction: column;
+background-color: #f4f4f4;
+height: 750rpx;
+
+
+}
+.top {
+display: flex;
+flex-direction: column;
+background-color: black;
+min-height: 300rpx;
+padding-top: 100rpx;
+}
+.title {
+  font-size: 14pt;
+margin-left: 40rpx;
+color: white;
+
+}
+.subbt{
+  background-color: #2793ee;
+color: white;
+margin-top: -40px;
+
+}
+.more{
+  display: flex;
+flex-direction: row;
+margin: 40rpx;
+justify-content: center;
+align-items: center;
+font-size: 11pt;
+
+}
+.mid {
+  display: flex;
+justify-items: center;
+flex-direction: column;
+margin-top: -70px;
+
+}
+.login {
+  display: flex;
+flex-direction: column;
+justify-items: center;
+justify-content: center;
+justify-self: center;
+align-items: center;
+background-color: white;
+margin: 40rpx;
+border-radius: 24rpx;
+padding-top: 40rpx;
+padding-bottom: 40px;
+
+}
+.username {
+  border-bottom: 1rpx solid black;
+min-height: 70rpx;
+width: 500rpx;
+margin-top: 17rpx;
+
+
+}
+.password {
+  border-bottom: 1rpx solid black;
+min-height: 70rpx;
+width: 500rpx;
+margin-top: 17rpx;
+
+
+}
+.nbviwew{
+  display: flex;
+line-height: 20rpx;
+flex-direction: row;
+justify-items: center;
+align-items: center;
+width: 500rpx;
+margin-top: 17rpx;
+
+}
+.code {
+  border-bottom: 1rpx solid black;
+min-height: 70rpx;
+
+}
+.getcode {
+max-height: 60rpx;
+min-height: 52rpx;
+max-width: 200rpx;
+min-width: 100rpx;
+
+padding: none;
+text-align: center;
+justify-items: center;
+text-justify: center;
+
+background-color: #2793ee;
+color: white;
+font-weight: 400;
+
+
+
+}
+.bindsss {
+}

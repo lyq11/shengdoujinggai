@@ -1,0 +1,37 @@
+/* miniprogram/pages/share/share_internal.wxss */
+Page{
+  background-color: #f4f4f4;
+
+}
+.pic_title{
+  display: flex;
+align-items: center;
+
+}
+.pic{
+
+}
+.title{
+
+}
+.page_index{
+display: flex;
+flex-direction: column;
+
+}
+.weui-input{
+border: 1rpx solid black;
+min-width: 333rpx;
+margin: 30rpx;
+min-height: 50rpx;
+}
+.default{
+
+}
+.subview{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}

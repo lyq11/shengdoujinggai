@@ -1,0 +1,107 @@
+<!-- Home.wxml -->
+<view class='carousel'>
+  <wxs src="../../utils/state.wxs" module="state" />
+  <!-- <view class="search" bindtap="searchBind">
+    <input type="text" placeholder="输入要搜索的设备名称" confirm-type="search" />
+  </view> -->
+  <view class="sam iconfont icon-jiankongshuju"> 设备概览</view>
+  <view style="" class="recordItem">
+    <view class="up_line">
+
+      <view class="vv v_1" data-sel="1" bind:tap="gotolist">
+        <view class="v_co">
+          <label class="v_text" style="color:rgba(235, 97, 0, 1.000)">{{lowpower_count}}</label>
+        </view>
+        <view class="v_title" style="background:rgba(235, 97, 0, 1.000)"><view class="iconfont icon-iconset0250"></view>电量低设备</view>
+      </view>
+
+      <view class="vv v_2" data-sel="2" bind:tap="gotolist">
+        <view class="v_co">
+          <label class="v_text" style="color:rgba(109, 105, 104, 1.000)">{{offline_count}}</label>
+        </view>
+        <view class="v_title" style="background:rgba(109, 105, 104, 1.000)"><view class="iconfont icon-lixian"></view>离线设备</view>
+      </view>
+      <view class="vv v_3" data-sel="3" bind:tap="gotolist">
+        <view class="v_co">
+          <label class="v_text" style="color:rgba(255, 25, 38, 1.000)">{{warning_count}}</label>
+        </view>
+        <view class="v_title" style="background:rgba(254, 0, 0, 1.000)"><view class="iconfont icon-zhanghuyichang"></view>预警设备</view>
+      </view>
+    </view>
+    <view class="up_line">
+      <view class="vv v_1" data-sel="4" bind:tap="gotolist">
+        <view class="v_co">
+          <label class="v_text">{{sleep_count}}</label>
+        </view>
+        <view class="v_title" style="background:rgba(17, 150, 219, 1.000)"><view class="iconfont icon-shuifa"></view>休眠设备</view>
+      </view>
+      <view class="vv v_2" data-sel="5" bind:tap="gotolist">
+        <view class="v_co">
+          <label class="v_text" style="color:rgba(122, 234, 52, 1.000)">{{online_count}}</label>
+        </view>
+        <view class="v_title" style="background:rgba(0, 255, 1, 1.000)"><view class="iconfont icon-moshi"></view>在线设备</view>
+      </view>
+      <view class="vv v_3" data-sel="6" bind:tap="gotolist">
+        <view class="v_co">
+          <label class="v_text" style="color:rgba(210, 149, 92, 1.000)">{{fix_count}}</label>
+        </view>
+        <view class="v_title" style="background:rgba(210, 149, 92, 1.000)"><view class="iconfont icon-xitongtongzhi"></view>维保设备</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+  <view class="list">
+    <view class='list-half'>
+      <block wx:if="{{warninglist.length != 0}}">
+        <view wx:for="{{warninglist}}" data-deviceid="{{item.device_uni_id}}" wx:key="index" class='card' bindtap="gotodetail">
+          <view class="color-tag" style="height: 20rpx;background: rgba(255, 25, 38, 1.000)"></view>
+          <view class="card-line-1">
+            <label class="card-line-title">{{item.name}}</label>
+            <label class="card-line-online" style="{{state.onlineinput(item.device_isonline).style}}">{{state.onlineinput(item.device_isonline).name}}</label>
+            <label class="card-line-online" style="{{state.stateinput(item.warning_status).style}}">{{state.stateinput(item.warning_status).name}}</label>
+          </view>
+          <view class="card-line-2">
+            <label>{{CompanyType[item.co_id].name }}</label>
+          </view>
+          <view class="card-line-3">
+            <image class="CoverImg" src="http://www.sundaytek.com/img/smart.png" mode="widthFix"></image>
+            <view class="card-text-su">
+              <label>高度</label>
+              <label>{{item.facevalue}}</label>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{warninglist.length == 0}}">
+        <view class="safe">
+          <view>当前没有设备出现预警</view>
+        </view>
+      </block>
+
+
+    </view>
+  </view>
+</view>
+
+<view class="up_line">
+     <!-- 搜索 -->
+      <view class="vv v_1"  bindtap="searchBind">
+        <view class="v_co ">
+          <label class="v_text iconfont icon-search " style="color:rgba(34, 173, 56, 1.000)"></label>
+        </view>
+        <view class="v_title v_tit_h" style="background:rgba(34, 173, 56, 1.000)"><view></view>搜索</view>
+      </view>
+      <view class="vv v_2"  bind:tap="gotolist">
+        <view class="v_co">
+          <label class="v_text iconfont icon-yijianfankui " style="color:rgba(243, 152, 1, 1.000)"></label>
+        </view>
+        <view class="v_title v_tit_h" style="background:rgba(243, 152, 1, 1.000)"><view ></view>注册</view>
+      </view>
+      <view class="vv v_3"  bind:tap="gotolist">
+        <view class="v_co">
+          <label class="v_text iconfont icon-yonghuguanli" style="color:rgba(17, 150, 180, 1.000)"></label>
+        </view>
+        <view class="v_title v_tit_h" style="background:rgba(17, 150, 180, 1.000)"><view ></view>用户</view>
+      </view>
+    </view>

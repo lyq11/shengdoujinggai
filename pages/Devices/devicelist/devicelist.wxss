@@ -1,0 +1,177 @@
+/* miniprogram/pages/Devices/devicelist/device list.wxss */
+Page{
+  background-color: #fff;
+}
+.setfont{
+  font-size: 12px;
+}
+.con{
+  display: flex;
+  flex-direction: column;
+}
+.menu {
+ 	display: block;
+	height: 38px;
+	position: relative;
+}
+.cards{
+    background-color: rgba(238, 238, 238, 1.000);
+    margin: 20rpx;
+    border-radius: 13rpx;
+    min-height: 190rpx;
+    display: flex;
+		flex-direction: column;
+		color: white;
+    
+    }
+    .card-line-1{
+    
+    }
+    .CoverImg{
+    flex-basis: 100rpx;
+    
+    }
+/*一级菜单*/
+.menu dt {
+	font-size: 15px;
+	float: left;
+	/*hack*/
+	width: 249rpx;
+	height: 72rpx;
+	border-right: 1rpx solid #ccc;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	background-color: rgb(248, 147, 29,1.0);
+	color: white;
+	line-height: 72rpx;
+	z-index: 2;
+	position: relative;
+}
+.menu dt:nth-child(5){
+	border-right:0;
+	width: 250rpx;
+}
+
+/*二级菜单外部容器样式*/
+.menu dd{
+	position: absolute;
+	width: 100%;
+	/*hack*/
+	top:-105px;
+	bottom: 0;
+	left:0;
+	z-index: 1;
+
+}
+
+/*二级菜单普通样式*/
+.menu li{
+	font-size: 14px;
+	line-height: 34px;
+	color: white;
+	height: 34px;
+	display: block;
+	padding-left: 8px;
+	background-color: rgb(248, 147, 29,0.9);
+
+
+	border-bottom: 1px solid #dbdbdb;
+}
+
+/*二级菜单高亮样式*/
+.menu li.highlight{
+	background-color: rgb(153, 77, 82,1.0);
+	color: rgba(85, 72, 64, 1.000);
+}
+
+/*商品列表*/
+.goodsLists {
+	/*hack*/
+	margin-top:2px;
+	border: 2px dashed red;
+	height: 400px;
+	background-color: orange;
+	opacity: 0.5;
+	z-index:-9;
+}
+
+/* 显示与隐藏 */
+.show {
+	/*display: block;*/
+	visibility: visible;
+}
+
+.hidden {
+	/*display: none;*/
+	visibility:hidden;
+}
+
+.hiddencard {
+  display: none;
+  visibility: hidden;
+}
+.card_title_area{
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+margin-left: 25rpx;
+margin-top: 10rpx;
+margin-right: 20rpx;
+align-items: center;
+color: #000;
+}
+.card_title{
+	color: #000;
+font-size: 35rpx;
+margin-left: 10rpx;
+margin-right: 10rpx;
+min-width: 250rpx;
+overflow: hidden;
+white-space: nowrap;
+max-width: 190rpx;
+
+}
+.card_title1{
+padding-left: 300rpx;
+margin-left: 10rpx;
+margin-right: 10rpx;
+}
+.card_title2{
+padding-left: 300rpx;
+margin-left: 10rpx;
+margin-right: 10rpx;
+}
+.card_prop_area{
+	color: #000;
+margin-left: 35rpx;
+display: flex;
+flex-direction: column;
+min-height: 150rpx;
+flex-wrap: wrap;
+
+}
+.card_prop{
+
+}
+.card_bt_area{
+margin-left: 35rpx;
+margin-right: 35rpx;
+display: flex;
+flex-direction: row;
+padding-bottom: 17rpx;
+justify-content: space-between;
+align-items: center;
+
+}
+.grape{
+max-height: 20rpx;
+}
+.facevalue{
+font-size: 36rpx;
+align-items: flex-end;
+display: flex;
+
+}
+.deviceList{
+	
+}

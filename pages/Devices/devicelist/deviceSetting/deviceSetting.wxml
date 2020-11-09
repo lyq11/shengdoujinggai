@@ -1,0 +1,13 @@
+<!--miniprogram/pages/Devices/devicelist/deviceSetting/deviceSetting.wxml-->
+<wxs src="../deviceSetting/deviceSetting.wxs" module="tools" />
+ <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+<mp-cells title="设置" footer="">
+  <mp-cell show-error wx:for="{{prop}}" prop="{{item.id}}" title="{{item.name}}" ext-class="text_intext">
+    <input bindinput="formInputChange" maxlength="20"data_id = "{{device[item.id]}}" value="{{device[item.id]}}" data-field="{{item.id}}" class="weui-input text_intext" placeholder="{{item.name}}"/>
+  </mp-cell>
+</mp-cells>
+</mp-form>
+<view style="display:flex">
+<button bindtap="btback" class="sumbit" size="defalut" type="primary">返回</button>
+<button bindtap="submitForm" class="sumbit" disabled="{{cansum == 1? false:true}}" size="defalut" type="primary">提交</button>
+</view>

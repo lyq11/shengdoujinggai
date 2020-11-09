@@ -1,0 +1,14 @@
+/* miniprogram/pages/share/share.wxss */
+page{
+  background-color: #f4f4f4;
+}
+.share_m{
+
+}
+.share_w{
+margin: 20rpx;
+
+}
+.vies{
+
+}

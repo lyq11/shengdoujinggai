@@ -1,0 +1,44 @@
+/* miniprogram/pages/me/information/informationDetails/informationDetails.wxss */
+page{
+  background-color: #f4f4f4;
+}
+.weui-form-preview{
+    margin-bottom: 25px;
+}
+.flex{
+  display: flex;
+justify-content: space-between;
+text-align: left;
+}
+.fourbg{
+margin: 25rpx;
+border-radius: 25rpx;
+
+}
+.bgs{
+  margin: 25px;
+  border-radius: 20rpx;
+}
+.cusbt-done{
+  background-color: lightgray;
+  color: white;
+  border-radius: 00rpx 0rpx 20rpx 20rpx;
+}
+.cusbt-r{
+  background-color: #2793ee;
+  color: white;
+  border-radius: 00rpx 0rpx 20rpx 0rpx;
+  border-left: 1rpx solid white;
+
+}
+.cusbt-l{
+  background-color: #2793ee;
+  color: white;
+  border-radius: 00rpx 0rpx 0rpx 20rpx;
+  border-right: 1rpx solid white;
+
+}
+.title{
+  font-size: 14pt;
+
+}

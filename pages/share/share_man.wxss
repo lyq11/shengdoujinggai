@@ -1,0 +1,4 @@
+/* miniprogram/pages/share/share_man.wxss */
+.del{
+  background-color: #2793ee;
+}
