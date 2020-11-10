@@ -28,6 +28,17 @@ margin-right: 25rpx;
 margin-bottom: 120rpx;
 
 }
+.contactFat{
+  position: relative;
+}
+.contact{
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  opacity: 0;
+  width: 690rpx !important;
+  height: 100rpx;
+}
 .news{
   width: 750;
 height: 115rpx;
@@ -182,3 +193,5 @@ font-size:20rpx;
 padding:5rpx;
 
 }
+
+

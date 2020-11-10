@@ -1,16 +1,17 @@
 {
   "pages": [
+
     "pages/Home/Home",
     "pages/me/me",
     "pages/index/index",
     "pages/logs/logs",
     "pages/Devices/Devices",
     "pages/Devices/devicelist/devicelist",
-    "pages/Devices/deviceDetail/deviceDetail",
     "pages/Devices/deviceDetail/canvasD/canvasD",
     "pages/me/information/information",
     "pages/share/share",
     "pages/share/share_internal",
+    "pages/Devices/deviceDetail/deviceDetail",
     "pages/Devices/addDevice/addDevice",
     "pages/me/information/informationDetails/informationDetails",
     "pages/share/share_man",
@@ -18,10 +19,9 @@
     "pages/index/register/register",
     "pages/Map/map",
     "pages/me/aboutus/aboutus",
-    
-    "pages/Home/search/search"
 
-
+    "pages/Home/search/search",
+    "pages/Home/registerDevice/registerDevice"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -47,9 +47,10 @@
 				<image slot="icon" src="../../img/yonghuxieyi.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
 				<view>用户协议和隐私政策</view>
 			</mp-cell>
-			<mp-cell link url="../index">
+			<mp-cell link url="../index" class="contactFat">
 				<image slot="icon" src="../../img/Group-.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
 				<view>帮助及反馈</view>
+				<button class="contact" open-type="contact">透明遮罩层</button>
 			</mp-cell>
 
 		</mp-cells>

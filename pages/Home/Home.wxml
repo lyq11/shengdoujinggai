@@ -92,7 +92,7 @@
         </view>
         <view class="v_title v_tit_h" style="background:rgba(34, 173, 56, 1.000)"><view></view>搜索</view>
       </view>
-      <view class="vv v_2"  bind:tap="gotolist">
+      <view class="vv v_2"  bindtap="registerDevice">
         <view class="v_co">
           <label class="v_text iconfont icon-yijianfankui " style="color:rgba(243, 152, 1, 1.000)"></label>
         </view>

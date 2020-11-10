@@ -16,6 +16,39 @@ page{
   right: -643rpx;
   font-size: 40rpx;
 }
+.isonline{
+  position: absolute;
+  top: 70rpx;
+  left: 555rpx;
+  border: 2rpx solid rgb(4, 122, 254);
+  color: rgb(4, 122, 254);
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  justify-content: center;
+  display: flex;
+}
+
+/* 在线 */
+.online{
+  border: 2rpx solid rgb(0, 255, 1);
+  color: rgb(0, 255, 1);
+}
+/* 离线 */
+.noline{
+  border: 2rpx solid  rgb(109, 105, 104);
+  color: rgb(109, 105, 104);
+}
+/* 休眠 */
+.sleep{
+  border: 2rpx solid rgb(17, 150, 219);
+  color: rgb(17, 150, 219);
+}
+/* 隐藏 */
+.hid{
+  display: none;
+}
+
 .searchInp{
   width: 500rpx;
   font-size: 35rpx;

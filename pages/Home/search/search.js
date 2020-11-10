@@ -14,9 +14,23 @@ Page({
     // 标签
     flag:false
   },
+   //点击卡片事件
+   jumpto: function (e) {
+    console.log(e.currentTarget.dataset.typeid);
+    
+    wx.navigateTo({
+        url: "../../Devices/deviceDetail/deviceDetail",
+        success: function (res) {
+            res.eventChannel.emit("acceptDataFromOpenerPage", {
+                data: e.currentTarget.dataset.typeid,
+            });
+        },
+    });
+},
   search: function (e) {
+    var that=this;
     //设备列表
-    var devlist=this.data.deviceslist
+    var devlist=this.data.deviceslist;
     //输入框内容
     var input=e.detail.value;
     //过滤不符合的设备
@@ -24,7 +38,10 @@ Page({
       // return input==e.name;
       return e.name.indexOf(input)>=0 || e.id.indexOf(input)>=0;
     });
+    //搜索到的结果
     console.log(newResult);
+    
+    
     //传值给data
     this.setData({
       searchResult:newResult

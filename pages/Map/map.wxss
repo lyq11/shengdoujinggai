@@ -8,3 +8,18 @@
 	height:100%;
 	width:100%;
 }
+.thisMe{
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #1296db;
+  position: fixed;
+  left: 50%;
+  margin-left: -100rpx;
+  bottom: 45rpx;
+	z-index: 99;
+	border-radius: 10rpx;
+	text-align: center;
+	letter-spacing: 10rpx;
+	color: #fff;
+}

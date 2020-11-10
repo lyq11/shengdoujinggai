@@ -33,13 +33,19 @@ Page({
     ],
   },
 
-  //跳转真正搜索界面
-  searchBind:function(){
+   //跳转到搜索界面
+   searchBind:function(){
     wx.navigateTo({  
       url: './search/search',  
     }) 
   },
 
+  //跳转到注册界面
+  registerDevice:function(){
+    wx.navigateTo({  
+      url: './registerDevice/registerDevice',  
+    }) 
+  },
 
   /**
    * 生命周期函数--监听页面加载

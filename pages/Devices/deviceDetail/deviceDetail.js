@@ -15,8 +15,19 @@ Page({
         currenttype: [],
         deviceProp: [{}],
         currentIndex: 0,
-        markers: null
+        markers: null,
+        //地图街景标志
+        imgflag:false
     },
+    //地图被点击了
+    imgbtn:function(){
+        console.log("地图图片被点击了");
+        var flag=!this.data.imgflag
+        this.setData({
+            imgflag:flag
+        })
+    },
+    //前往设备设置界面
     gotoSetting: function () {
         var that = this;
         wx.navigateTo({
@@ -304,21 +315,28 @@ Page({
                 that.updatedata(id);
             });
             var filterarray = deviceslist.list;
+            //过滤之后的设备数据
             var data = filterarray.filter((e) => {
                 return e.device_uni_id == id;
             });
+            console.log('这是过滤之后的设备数据');
+            console.log(data);
+            // 定义marker
             var marker = [{
                     iconPath: "../../../img/smart.png",
                     id: 0,
-                    title: "智能井盖1",
+                    title: data[0].name,
                     latitude: data[0].device.device_latitue,
                     longitude: data[0].device.device_longitute,
                     width: 30,
                     height: 30
                 }];
             that.setData({
+                //选中设备
                 currentdevice: data[0],
+                //选中设备类型
                 currenttype: DeviceType[data[0].type_id],
+                //标记
                 markers: marker
             });
             that.decode_prop(data);

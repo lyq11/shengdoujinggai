@@ -20,7 +20,7 @@ Page{
   box-sizing: border-box;
   margin-top: -90rpx;
   z-index: -1;
-
+position: relative;
 }
 
 .title {
@@ -158,4 +158,22 @@ height: 35rpx;
 }
 .my-cells{
   margin-top: -20rpx;
+}
+.imageMapMin{
+  position: absolute;
+  left: 0rpx;
+  top: 1945rpx;
+  width: 200rpx;
+  height: 200rpx;
+  z-index:99;
+  background-color: red;
+}
+.imageMapMax{
+  position: absolute;
+  left: 0rpx;
+  top: 1945rpx;
+  z-index:99;
+  width:750rpx;
+  height:100%;
+  background-color: black;
 }

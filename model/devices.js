@@ -25,7 +25,7 @@ class devicesmanager {
         //打印出当前设备属性
         console.log("这是当前设备的属性: "+this.list);
         var old = this.list.filter(device => {
-            //修改设备的ID值？
+            //返回ID相符的设备
             return device.id == id;
         });
         //edit==old[2]

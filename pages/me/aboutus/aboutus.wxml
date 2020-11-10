@@ -1,2 +1,26 @@
 <!--pages/me/aboutus/aboutus.wxml-->
-<text>pages/me/aboutus/aboutus.wxml</text>
+<image src="../../../image/LOGO.jpg" class="img"></image>
+<view class="hr"></view>
+
+<view class="main">
+  <view class="title">公司简介</view>
+  <view class="content">
+    公司成立于2015年7月,团队15人,其中半数为海归博士,硕士。专业领域包括半导体电路设计,嵌入式系统设计。公司致力于物联网软硬件开发,包括APP软件开发,根据客户的需求,为客户提供全套解决方案。公司发展方向为物联网,智能硬件开发等相关的产业项目。
+  </view>
+<view class="hr"></view>
+  <view class="title">企业文化</view>
+  <view class="content">承诺：敢于承诺,遵守承诺</view>
+  <view class="content">诚信：诚信经营,互利互信</view>
+  <view class="content">进取：积极进取,勇往直前</view>
+  <view class="content">成长：成长无限,反哺社会</view>
+  <view class="hr"></view>
+
+  <view class="title">团队成员</view>
+  <view class="content">1.创始团队由15位专业技术人员组成,其中共有1位博士,7位硕士,7位本科相关专业学历人员。多数拥有海外留学或工作背景,多年就职于世界500强高科技企业的优秀职业素养和项目管理经验
+  </view>
+  <view class="content">
+    2.本产品根据城市弱电人井分布特点,结合实地应用场景,因地制宜,通过NB-loT组网快速实现城市井盖智能实时云监测物联网系统的部署。极大缩短了系统施工周期,降低了系统实施的成本。管理人员可以通过该系统实时获取各人井的报警信息(包括合法开启、非法开启、液位高度、有害气体浓度等),并且完成各井盖的智能开启与锁止功能,大幅提高市政管理的信息化、智慧化水平,为智慧城市奠定行业应用基础。
+  </view>
+<view class="hr"></view>
+<view class="exit" bindtap="exit">返回首页</view>
+</view>
