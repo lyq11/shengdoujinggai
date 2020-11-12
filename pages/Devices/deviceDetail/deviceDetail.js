@@ -321,7 +321,7 @@ Page({
             });
             console.log('这是过滤之后的设备数据');
             console.log(data);
-            // 定义marker
+            // 定义marker   
             var marker = [{
                     iconPath: "../../../img/smart.png",
                     id: 0,

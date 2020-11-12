@@ -11,6 +11,7 @@ Page({
     longitude:0,
     markers: [],
   },
+  //回到当前位置
   thisMe:function(){
     let mpCtx = wx.createMapContext("map");
     mpCtx.moveToLocation();
@@ -30,6 +31,23 @@ Page({
       },
     })
   },
+  // 点击callout时触发
+  bindcallouttap:function(e){
+    console.log("点击了标记");
+    //e.detail是marker的ID
+    console.log(e);
+
+   
+        wx.navigateTo({
+            url: "../Devices/deviceDetail/deviceDetail",
+            success: function (res) {
+                res.eventChannel.emit("acceptDataFromOpenerPage", {
+                    data: e.detail,
+                });
+            },
+        });
+    
+  },
   createmakers:function(){
     var makerslist_pre = [];
     var makerslist = [];
@@ -38,8 +56,10 @@ Page({
       return device.type_id == 2 || device.type_id == 6  //推测井盖
     })
     makerslist_pre.forEach((dev)=>{
-      var s = 0;
-      s++;
+      // var s = 0;
+      // s++;
+      console.log("这是dev的值：");
+      console.log(dev.device_uni_id);
       makerslist.push(
         {
           iconPath: "../../img/smart.png",
@@ -48,15 +68,17 @@ Page({
           width: 30,
           height: 30,
           title:"智能井盖1",
-          id:s,
+          //测试数据ID  MH2020040901  
+          // id:dev.device_uni_id,
+          id:111111,
           //marker上的气泡框，与title并存时替代title
           callout:{
-            content:"设备名称:"+dev.name+"\n"+"设备ID:"+dev.id+"\n"+"经度:"+longitude+"\n"+"纬度:"+latitude,
-            color:"#EE5E7B",
+            content:"名称:"+dev.name+"\n"+"ID:"+dev.id+"\n"+"经度 n :"+dev.device.device_longitute+"\n"+"纬度:"+dev.device.device_latitue+"\n"+"井盖详情→",
+            color:"#000",
             borderWidth:1,
             borderColor:"#EE5E78",
             borderRadius:5,
-            padding:5,
+            padding:5
           }
         }
       )

@@ -2,7 +2,7 @@
 
 <map class="map" id="map" 
 subkey = "Y6MBZ-FJRCF-MHNJO-NETUQ-NNUJZ-HZFNR" layer-style="1"
-markers="{{markers}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="25"  circles="{{circles}}" show-location="{{true}}" bindmarkertap="marker"></map>
+markers="{{markers}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="25"  circles="{{circles}}" show-location="{{true}}"bindmarkertap="marker" bindcallouttap="bindcallouttap"></map>
 <view class="thisMe" bindtap="thisMe">自身位置</view>
 
 </view>
