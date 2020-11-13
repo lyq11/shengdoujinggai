@@ -1,0 +1,4 @@
+/* pages/Devices/deviceDetail/qqNavigation/qqNavigation.wxss */
+page{
+  background-color: #fff;
+}

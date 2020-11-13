@@ -1,6 +1,5 @@
 {
   "pages": [
-
     "pages/Home/Home",
     "pages/me/me",
     "pages/index/index",
@@ -19,9 +18,9 @@
     "pages/index/register/register",
     "pages/Map/map",
     "pages/me/aboutus/aboutus",
-
     "pages/Home/search/search",
-    "pages/Home/registerDevice/registerDevice"
+    "pages/Home/registerDevice/registerDevice",
+    "pages/Devices/deviceDetail/qqNavigation/qqNavigation"
   ],
   "window": {
     "backgroundTextStyle": "light",

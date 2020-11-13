@@ -18,9 +18,8 @@ Page{
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  margin-top: -90rpx;
-  z-index: -1;
-position: relative;
+  /* margin-top: -90rpx; */
+  position: relative;
 }
 
 .title {
@@ -160,18 +159,12 @@ height: 35rpx;
   margin-top: -20rpx;
 }
 .imageMapMin{
-  position: absolute;
-  left: 0rpx;
-  top: 1945rpx;
-  width: 200rpx;
-  height: 200rpx;
-  z-index:99;
-  background-color: red;
+ display: none;
 }
 .imageMapMax{
-  position: absolute;
+  position: fixed;
   left: 0rpx;
-  top: 1945rpx;
+  top: 0rpx;
   z-index:99;
   width:750rpx;
   height:100%;

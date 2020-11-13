@@ -17,7 +17,11 @@ Page({
         currentIndex: 0,
         markers: null,
         //地图街景标志
-        imgflag:false
+        imgflag:false,
+        //经度
+        longitude:'',
+        //纬度
+        latitude:''
     },
     //地图被点击了
     imgbtn:function(){
@@ -26,6 +30,17 @@ Page({
         this.setData({
             imgflag:flag
         })
+    },
+    //前往路线规划界面
+    bindcallouttap:function(){
+        var longitude=this.data.longitude;
+        var latitude=this.data.latitude;
+        console.log("下面是经度和纬度的值：！！！");
+        console.log(longitude);
+        console.log(latitude);
+        wx.navigateTo({
+            url: './qqNavigation/qqNavigation?longitude='+longitude+'&latitude='+latitude,
+          })
     },
     //前往设备设置界面
     gotoSetting: function () {
@@ -132,7 +147,7 @@ Page({
                 icon: "none",
                 duration: 2000,
             });
-        }
+        } 
         if (this.data.currentdevice.device_isonline == 2) {
             this.unlocksend();
             wx.showToast({
@@ -321,15 +336,28 @@ Page({
             });
             console.log('这是过滤之后的设备数据');
             console.log(data);
+            that.setData({
+            latitude: data[0].device.device_latitue,
+            longitude: data[0].device.device_longitute
+            })
             // 定义marker   
             var marker = [{
                     iconPath: "../../../img/smart.png",
                     id: 0,
-                    title: data[0].name,
+                    title: '点我进入路线规划',
                     latitude: data[0].device.device_latitue,
                     longitude: data[0].device.device_longitute,
                     width: 30,
-                    height: 30
+                    height: 30,
+                    callout: {
+                        content: '点我进入路线规划',
+                        color: "#000",
+                        borderWidth: 1,
+                        borderColor: "#EE5E78",
+                        borderRadius: 5,
+                        padding: 5
+                      }
+                   
                 }];
             that.setData({
                 //选中设备
