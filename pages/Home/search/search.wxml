@@ -26,7 +26,6 @@
   <view class="{{item.device_isonline== 1 ? 'online' : 'hid'}} isonline">在线</view>
   <view class="{{item.device_isonline== 0 ? 'noline' : 'hid'}} isonline">离线</view>
   <view class="{{item.device_isonline== 2 ? 'sleep' : 'hid'}} isonline">休眠</view>
-
 </view>
 
 

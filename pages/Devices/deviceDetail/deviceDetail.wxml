@@ -46,7 +46,7 @@
   <!-- 地图  只有智能井盖才有地图 -->
   <view class='tabview'>
     <view wx:if="{{currenttype.type_name == '智能井盖'}}">
-    <map id="map"  subkey = "Y6MBZ-FJRCF-MHNJO-NETUQ-NNUJZ-HZFNR" layer-style="2" markers="{{markers}}" longitude="{{currentdevice.device.device_longitute}}" latitude="{{currentdevice.device.device_latitue}}" scale="14"  enable-zoom="false" enable-scroll="false" show-location style="width: 100%; height: 800rpx;" bindcallouttap="bindcallouttap"></map>
+    <map id="map"  subkey = "LPCBZ-ELFC2-CMDU3-CJVZV-6IGUV-U6BK2" layer-style="2" markers="{{markers}}" longitude="{{currentdevice.device.device_longitute}}" latitude="{{currentdevice.device.device_latitue}}" scale="14"  enable-zoom="false" enable-scroll="{{false}}" show-location style="width: 100%; height: 800rpx;" bindcallouttap="bindcallouttap" ></map>
     </view>
   </view>
 </view>

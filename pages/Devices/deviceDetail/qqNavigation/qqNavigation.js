@@ -1,4 +1,6 @@
 // pages/Devices/deviceDetail/qqNavigation/qqNavigation.js
+
+
 Page({
 
   /**

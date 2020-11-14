@@ -21,7 +21,9 @@ Page({
         //经度
         longitude:'',
         //纬度
-        latitude:''
+        latitude:'',
+        //设备名称
+        devName:''
     },
     //地图被点击了
     imgbtn:function(){
@@ -35,12 +37,23 @@ Page({
     bindcallouttap:function(){
         var longitude=this.data.longitude;
         var latitude=this.data.latitude;
+        var devName=this.data.devName;
         console.log("下面是经度和纬度的值：！！！");
         console.log(longitude);
         console.log(latitude);
+
+        let plugin = requirePlugin('routePlan');
+        let key = 'LPCBZ-ELFC2-CMDU3-CJVZV-6IGUV-U6BK2';  //使用在腾讯位置服务申请的key
+        let referer = '智能井盖';   //调用插件的app的名称
+        let endPoint = JSON.stringify({  //终点
+          'name': devName,
+          'latitude': latitude,
+          'longitude': longitude
+        });
         wx.navigateTo({
-            url: './qqNavigation/qqNavigation?longitude='+longitude+'&latitude='+latitude,
-          })
+          url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint + '&navigation=1'
+        });
+     
     },
     //前往设备设置界面
     gotoSetting: function () {
@@ -338,7 +351,8 @@ Page({
             console.log(data);
             that.setData({
             latitude: data[0].device.device_latitue,
-            longitude: data[0].device.device_longitute
+            longitude: data[0].device.device_longitute,
+            devName:data[0].name
             })
             // 定义marker   
             var marker = [{

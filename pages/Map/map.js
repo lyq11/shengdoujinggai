@@ -43,8 +43,8 @@ Page({
     makerslist_pre = deviceslista.filter((device) => {
       return device.type_id == 2 || device.type_id == 6 //推测井盖
     })
-   
-    console.log("点击了标记");   
+
+    console.log("点击了标记");
     //e.detail是marker的id(当前应该是index)   
     console.log(e.detail.markerId);
 
@@ -52,7 +52,7 @@ Page({
     console.log("这是当前的data.code 所有的marker标记的数据   应该是一个数组,索引号+设备ID");
     console.log(this.data.code);
     var dataCode = this.data.code;
-   
+
 
 
     console.log("这是传递的参数!!!!!!!!!!!!!!!!!!!!!!");
@@ -77,26 +77,47 @@ Page({
     makerslist_pre = deviceslista.filter((device) => {
       return device.type_id == 2 || device.type_id == 6 //推测井盖
     })
-    makerslist_pre.forEach((dev,index) => {
-      
+
+    makerslist_pre.forEach((dev, index) => {
+
       console.log("这是dev的值：");
       console.log(dev.device_uni_id);
       that.data.code.push({
         markerDevId: dev.device_uni_id,
-        index:index
+        index: index
       })
 
+      // 判断设备状态
+      var img = '';
+      switch (dev.device_isonline) {
+        case "0":
+          img="../../img/lixian.png";
+          console.log("进来了");
+          
+          break;
+        case "1":
+          img="../../img/zaixian.png";
+          break;
+        case "2":
+          img="../../img/xiumian.png";
+          break;
+        // default:
+        //   默认代码块
+      }
+      console.log("这是dev.device_isonline的值");
+      console.log(dev.device_isonline);
+      
       makerslist.push({
-        iconPath: "../../img/smart.png",
+        iconPath: img,
         latitude: dev.device.device_latitue,
         longitude: dev.device.device_longitute,
         width: 30,
         height: 30,
         title: "智能井盖1",
-        id:index,
+        id: index,
         //marker上的气泡框，与title并存时替代title
         callout: {
-          content: "名称:" + dev.name + "\n" + "ID:" + dev.id + "\n" + "经度 n :" + dev.device.device_longitute + "\n" + "纬度:" + dev.device.device_latitue + "\n" + "井盖详情→",
+          content: "名称:" + dev.name + "\n" + "ID:" + dev.id + "\n" + "经度:" + dev.device.device_longitute + "\n" + "纬度:" + dev.device.device_latitue + "\n" + "井盖详情→",
           color: "#000",
           borderWidth: 1,
           borderColor: "#EE5E78",
