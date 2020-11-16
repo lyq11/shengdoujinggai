@@ -97,11 +97,12 @@ Page({
         var type_device_list = deviceslist.list;
         //筛选出了所有的井盖子
         var filterlist = type_device_list.filter((e) => {
-            return e.type_id == type_id;
+            // return e.type_id == type_id;
+            return e.type_id == 2 || e.type_id == 3 || e.type_id == 6 || e.type_id == 7;
         });
         console.log('aa');
         console.log(filterlist);
-        //filterlist设备列表
+        //filterlist设备列表   device_power电池电量<20为电量低 
         for(let listnum=0;listnum<filterlist.length;listnum++){
             if(filterlist[listnum].device_isonline){
             if(filterlist[listnum].device_isonline==0){
@@ -137,9 +138,6 @@ Page({
             face_value_name: getFace_value_name,
         });
     },
-
-   
-
 
     //长按卡片功能
     longtaptap: function (e) {

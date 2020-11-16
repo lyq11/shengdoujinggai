@@ -9,8 +9,8 @@
 		</view>
 	</view>
 	<view class='news'>
-		<view class='myordertitle'>
-			<image slot="icon" src="../../img/xiaoxizhongxin.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>个人中心
+		<view class='myordertitle' bindtap="usCenten">
+			<image slot="icon" src="../../img/xiaoxizhongxin.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;" ></image>个人中心
 		</view>
 	</view>
 	<view class="mine">

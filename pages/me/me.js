@@ -91,6 +91,14 @@ Page({
         }
       })
   },
+
+  //进入个人中心界面
+  usCenten:function(){
+    wx.navigateTo({
+      url: './usCenten/usCenten',
+    })
+  },
+
   gototest: function (e) {
     wx.navigateTo({
       url: './orderlist/orderlist?id=' + e.currentTarget.dataset.id + '&ids=' + e.currentTarget.dataset.ids,

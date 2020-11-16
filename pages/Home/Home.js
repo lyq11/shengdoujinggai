@@ -104,8 +104,9 @@ Page({
         //筛选
         var narray = array.filter((e) => {
           //筛选出type_id==2的设备，井盖设备
-          return parseInt(e.type_id) == "2";
+          return parseInt(e.type_id) == "2" || parseInt(e.type_id) == "3" ||parseInt(e.type_id) == "6" ||parseInt(e.type_id) == "7" ;
         });
+
         console.log(narray);
         
         // 当前array的值为三个对象
@@ -155,10 +156,12 @@ Page({
       });
     }
   },
+  //获取用户信息
   getUserInfos: function () {
     var that = this;
     var token = wx.getStorageSync("token");
     var MainUrl = wx.getStorageSync("MainAddress");
+    //请求服务器
     wx.request({
       url: "https://" + MainUrl + "/api/getUserInfo",
       method: "POST",
@@ -167,11 +170,15 @@ Page({
         Authorization: "Bearer " + token,
       },
       success: function (res) {
+        console.log("这是res.data.status_text的值");
         console.log(res.data.status_text);
         app.globalData.UserInfos = res.data.status_text;
         var userinfo = app.globalData.UserInfos;
+        //将用户姓名存入缓存数据
+        wx.setStorageSync('userName', userinfo.Home_title);
+       var storageUserName =  wx.getStorageSync('userName')
         wx.setNavigationBarTitle({
-          title: userinfo.Home_title,
+          title:storageUserName,
         });
         var sd = wx.getStorageSync("CompanyType");
 

@@ -148,12 +148,15 @@ Page {
 	padding-left: 300rpx;
 	margin-left: 10rpx;
 	margin-right: 10rpx;
+	width: 38rpx;
+
 }
 
 .card_title2 {
 	padding-left: 300rpx;
 	margin-left: 10rpx;
 	margin-right: 10rpx;
+	width: 38rpx;
 }
 
 .card_prop_area {
@@ -165,7 +168,10 @@ Page {
 	flex-wrap: wrap;
 }
 
-.card_prop {}
+.card_prop {
+	text-align: right;
+	width: 160rpx;
+}
 
 .card_bt_area {
 	margin-left: 35rpx;

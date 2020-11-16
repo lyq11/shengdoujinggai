@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/me/usCenten/usCenten"
+,
     "pages/Home/Home",
     "pages/me/me",
     "pages/index/index",
@@ -68,14 +70,12 @@
     "mp-badge": "./miniprogram_npm/weui-miniprogram/badge/badge",
     "mp-form": "./miniprogram_npm/weui-miniprogram/form/form"
   },
-  
   "plugins": {
     "routePlan": {
       "version": "1.0.10",
       "provider": "wx50b5593e81dd937a"
     }
   },
-
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"

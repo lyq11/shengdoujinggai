@@ -1,0 +1,4 @@
+/* pages/me/usCenten/usCenten.wxss */
+page{
+  background-color: #fff;
+}
