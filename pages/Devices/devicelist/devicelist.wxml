@@ -1,89 +1,99 @@
 <!--miniprogram/pages/Devices/devicelist/device list.wxml-->
 <view class="con">
-<wxs src="../../../utils/state.wxs" module="state"/>
+  <wxs src="../../../utils/state.wxs" module="state" />
 
 
   <!-- 顶部菜单栏 -->
   <dl class="menu">
-    <dt data-index="0" bindtap="tapMainMenu">状态</dt>
-    <dd class="{{ subMenuDisplay[0] }}" animation="{{ animationData[0] }}">
-      <ul>
-        <li class="{{ subMenuHighLight[0][0] }}" data-index="0-0" data-filter="0" bindtap="tapSubMenu">
-          所有
-        </li>
-        <li class="{{ subMenuHighLight[0][1] }}" data-index="0-1" data-filter="1" bindtap="tapSubMenu">
-          在线
-        </li>
-        <li class="{{ subMenuHighLight[0][2] }}" data-index="0-2" data-filter="2" bindtap="tapSubMenu">
-          离线
-        </li>
-        <li class="{{ subMenuHighLight[0][3] }}" data-index="0-3" data-filter="3" bindtap="tapSubMenu">
-          休眠
-        </li>
-      </ul>
-    </dd>
-    <dt data-index="1" bindtap="tapMainMenu">
-      异常状态
-    </dt>
-    <dd class="{{ subMenuDisplay[1] }}" animation="{{ animationData[1] }}">
-      <ul>
-      <li class="{{ subMenuHighLight[1][0] }}" data-index="1-0" bindtap="tapSubMenu">
-          所有
-        </li>
-        <li class="{{ subMenuHighLight[1][1] }}" data-index="1-1" bindtap="tapSubMenu">
-          维保
-        </li>
-        <li class="{{ subMenuHighLight[1][2] }}" data-index="1-2" bindtap="tapSubMenu">
-          预警
-        </li>
-        <li class="{{ subMenuHighLight[1][3] }}" data-index="1-3" bindtap="tapSubMenu">
-          低电量
-        </li>
-      </ul>
-    </dd>
-    <dt data-index="2" bindtap="tapMainMenu">设备</dt>
-    <dd class="{{ subMenuDisplay[2] }}" animation="{{ animationData[2] }}">
-      <ul>
-       <li class="{{ subMenuHighLight[2][0] }}" data-index="2-0" bindtap="tapSubMenu">
-          所有
-        </li>
-        <li class="{{ subMenuHighLight[2][1] }}" data-index="2-1" bindtap="tapSubMenu">
-          智能井盖
-        </li>
-        <li class="{{ subMenuHighLight[2][2] }}" data-index="2-2" bindtap="tapSubMenu">
-          智能井盖-HT
-        </li>
-       
-      </ul>
-    </dd>
+      <dt data-index="0" bindtap="tapMainMenu" class="tabTitle">状态</dt>
+      <dd class="{{ subMenuDisplay[0] }}" animation="{{ animationData[0] }}">
+        <ul>
+          <li class="{{ subMenuHighLight[0][0] }}" data-index="0-0" data-filter="0" bindtap="tapSubMenu">
+            所有
+          </li>
+          <li class="{{ subMenuHighLight[0][1] }}" data-index="0-1" data-filter="1" bindtap="tapSubMenu">
+            在线
+          </li>
+          <li class="{{ subMenuHighLight[0][2] }}" data-index="0-2" data-filter="2" bindtap="tapSubMenu">
+            离线
+          </li>
+          <li class="{{ subMenuHighLight[0][3] }}" data-index="0-3" data-filter="3" bindtap="tapSubMenu">
+            休眠
+          </li>
+        </ul>
+      </dd>
+
+      <dt data-index="1" bindtap="tapMainMenu" class="tabTitle">
+        异常状态
+      </dt>
+      <dd class="{{ subMenuDisplay[1] }}" animation="{{ animationData[1] }}">
+        <ul>
+          <li class="{{ subMenuHighLight[1][0] }}" data-index="1-0" bindtap="tapSubMenu">
+            所有
+          </li>
+          <li class="{{ subMenuHighLight[1][1] }}" data-index="1-1" bindtap="tapSubMenu">
+            维保
+          </li>
+          <li class="{{ subMenuHighLight[1][2] }}" data-index="1-2" bindtap="tapSubMenu">
+            预警
+          </li>
+          <li class="{{ subMenuHighLight[1][3] }}" data-index="1-3" bindtap="tapSubMenu">
+            低电量
+          </li>
+        </ul>
+      </dd>
+
+      <dt data-index="2" bindtap="tapMainMenu" class="tabTitle">设备分类</dt>
+      <dd class="{{ subMenuDisplay[2] }}" animation="{{ animationData[2] }}">
+        <ul>
+          <li class="{{ subMenuHighLight[2][0] }}" data-index="2-0" bindtap="tapSubMenu">
+            所有
+          </li>
+          <li class="{{ subMenuHighLight[2][1] }}" data-index="2-1" bindtap="tapSubMenu">
+            智能井盖
+          </li>
+          <li class="{{ subMenuHighLight[2][2] }}" data-index="2-2" bindtap="tapSubMenu">
+            智能井盖-HT
+          </li>
+
+        </ul>
+      </dd>
+
   </dl>
 
   <!-- 设备列表 -->
   <view class="deviceList">
-    <view wx:for="{{ devicelist_display }}" wx:key="index" bindtap="jumpto" bindlongtap="longtaptap" data-typeid="{{ item.id }}"
-    data-name="{{ item.name }}"  class="cards {{ item.ishidden == 1 ? 'hiddencard' : '' }}">
-    
-     <view class="color-tag" style="height: 20rpx;background: {{rgb}}"> </view>
+    <view wx:for="{{ devicelist_display }}" wx:key="index" bindtap="jumpto" bindlongtap="longtaptap"
+      data-typeid="{{ item.id }}" data-name="{{ item.name }}"
+      class="cards {{ item.ishidden == 1 ? 'hiddencard' : '' }}">
+
+      <view class="color-tag" style="height: 20rpx;background: {{rgb}}"> </view>
       <view class="card_title_area">
         <label class="card_title iconfont icon-famen"> {{ item.name }}</label>
-        <label class="card_title1" style="{{state.onlineinput(item.device_isonline).style}}">{{state.onlineinput(item.device_isonline).name}}</label>
-        <label class="card_title2" style="{{state.stateinput(item.warning_status).style}}">{{state.stateinput(item.warning_status).name}}</label>
+        <label class="card_title1"
+          style="{{state.onlineinput(item.device_isonline).style}}">{{state.onlineinput(item.device_isonline).name}}</label>
+        <label class="card_title2"
+          style="{{state.stateinput(item.warning_status).style}}">{{state.stateinput(item.warning_status).name}}</label>
         <label class="card_prop">ID:{{ item.device_uni_id }}</label>
       </view>
       <view class="card_prop_area">
         <view style="display:flex;flex-direction: row;justify-content: space-around;">
           <view style="min-width: 280rpx;">
-            <view class="iconfont icon-iconset0250" > {{devicetype.Property_4_name}}：{{item.device.device_power}}</view>
+            <view class="iconfont icon-iconset0250"> {{devicetype.Property_4_name}}：{{item.device.device_power}}</view>
             <view class="iconfont icon-dangdi"> {{devicetype.Property_5_name}}：{{item.device.device_longitute}}</view>
             <view class="iconfont icon-dangdi"> {{devicetype.Property_6_name}}：{{item.device.device_latitue}}</view>
-            <view class="iconfont icon-IOTtubiao_huabanfuben11"> {{devicetype.Property_7_name}}：{{item.device.device_signal}}</view>
+            <view class="iconfont icon-IOTtubiao_huabanfuben11">
+              {{devicetype.Property_7_name}}：{{item.device.device_signal}}</view>
+            <view class="iconfont icon-baojingzhiwen errColor"> 异常状态：水位过高</view>
           </view>
-        <label class="card_prop setfont iconfont {{state.coveropen(item.device[devicetype.Property_2_id]).icon}}" style="font-size:10vh">
-        </label>
-        <label class="card_prop setfont  iconfont {{state.lockerstatus(item.device[devicetype.Property_3_id]).icon}}" style="font-size:10vh">
-        </label>
+          <label class="card_prop setfont iconfont {{state.coveropen(item.device[devicetype.Property_2_id]).icon}}"
+            style="font-size:10vh">
+          </label>
+          <label class="card_prop setfont  iconfont {{state.lockerstatus(item.device[devicetype.Property_3_id]).icon}}"
+            style="font-size:10vh">
+          </label>
         </view>
-        
+
       </view>
     </view>
   </view>

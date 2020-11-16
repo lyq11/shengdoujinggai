@@ -38,7 +38,7 @@ input{
   color: rgb(48, 126, 209);
   padding-left: 60rpx;
   font-size: 35rpx;
-  width: 150rpx;
+  width: 2000rpx;
   text-align: center;
 }
 
