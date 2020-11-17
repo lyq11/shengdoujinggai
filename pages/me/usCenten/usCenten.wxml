@@ -1,2 +1,27 @@
 <!--pages/me/usCenten/usCenten.wxml-->
-<text>pages/me/usCenten/usCenten.wxml</text>
+<view class="box">
+  <view class="list">
+    <view class="title">用户名：</view>
+    <input type="text" placeholder="请输入你的用户名" />
+  </view>
+
+  <view class="list">
+    <view class="title">手机号：</view>
+    <input type="text" placeholder="请输入你的手机号" />
+  </view>
+
+  <view class="list">
+    <view class="title">设备总数：</view>
+    <input type="text" placeholder="54" />
+  </view>
+
+  <view class="list">
+    <view class="title">隶属单位：</view>
+    <input type="text" placeholder="圣豆电子" />
+  </view>
+
+  <button class="bind">绑定手机</button>
+  <button class="bind">绑定微信</button>
+
+  <button class="sub">保存</button>
+</view>

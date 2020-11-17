@@ -2,3 +2,38 @@
 page{
   background-color: #fff;
 }
+.list{
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  padding: 10rpx 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+.title{
+  font-size: 30rpx;
+  width: 35%;
+}
+input{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 65%;
+  text-align: left;
+  padding-left: 30rpx;
+}
+.bind{
+  background-color: rgb(180, 177, 177);
+  border: 0;
+  width: 100% !important;
+  margin-top: 10rpx;
+  color: #fff;
+}
+.sub{
+  position: fixed;
+  bottom: 100rpx;
+  width: 350rpx !important;
+  left: 50%;
+  margin-left: -175rpx !important;
+  background-color: #1296db;
+}
