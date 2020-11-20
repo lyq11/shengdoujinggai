@@ -5,14 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
+  },
 
+  registerDevice: function () {
+    var token = wx.getStorageSync('token');
+    console.log('token');
+    console.log(token);
+    
+    wx.request({
+      url: 'http://www.sundaytek.com/device/registerDevice',
+      method: "POST",
+      header: {
+        "content-type": "application/json",
+        Authorization: "Bearer " + token
+      },
+      data: {
+        deviceid: '2019110511',
+        device_code: '0',
+      },
+      success(res) {
+        console.log('请求成功了');
+        console.log(res.data);
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**

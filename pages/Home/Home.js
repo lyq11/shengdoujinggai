@@ -2,6 +2,7 @@
 var common = require("../../utils/NotificationCen");
 var wsser = require("../../utils/ws_ts");
 var deviceslist = require("../../model/devices").devicesmanager.getInstance();
+
 var app = getApp();
 let ws = wsser.wsmanager.getInstance();
 var timers;
@@ -31,7 +32,11 @@ Page({
         url: "https://www.sundaytek.com/",
       },
     ],
+    //百分比
+    percent:''
+   
   },
+
 
    //跳转到搜索界面
    searchBind:function(){
@@ -43,23 +48,37 @@ Page({
   //跳转到注册界面
   registerDevice:function(){
     wx.navigateTo({  
-      url: './registerDevice/registerDevice',  
+      url: '../Devices/addDevice/addDevice',  
     }) 
+    // ws.send("update");
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+  //预警状态假信息
+  //  共有30台设备，2台出现问题
+  var total=30,errNum=2;
+    var percent=Math.round(errNum/total*10000)/100+"%";
+    this.setData({
+      percent:percent
+    })
+
+
+
+
     //获得taken值
     var token = wx.getStorageSync("token");
     //如果token值为空则跳转至index
     if (token == null || token == "") {
       wx.reLaunch({
-        // url: "../index/index",
-        url: "../index/index",
+        url: "../index/index"
       });
     } else {
+      console.log('我的token不为空');
+      
       //链接服务器
       ws.start();
       wx.showLoading({
@@ -71,6 +90,9 @@ Page({
 
       this.requestCarouselListData(); //请求轮播图
       let inits = common.wsmanager.getInstance(); //消息中心的单例  
+      console.log('我在这里，这是inits的值');
+      console.log(inits);
+      
       //消息中心单例调用eguser(name, callb)方法返回了一个user
       //将当前页面的data数据作为回调函数参数
 
@@ -95,8 +117,6 @@ Page({
       //     url: "https://www.sundaytek.com/",
       //   },
       // ],
-
-
       let brook = inits.eguser("home", (data) => {
         //消息中心的回调
         //全部设备列表  
@@ -104,11 +124,11 @@ Page({
         //筛选
         var narray = array.filter((e) => {
           //筛选出type_id==2的设备，井盖设备
-          return parseInt(e.type_id) == "2" || parseInt(e.type_id) == "3" ||parseInt(e.type_id) == "6" ||parseInt(e.type_id) == "7" ;
+          return parseInt(e.type_id) == "2" || parseInt(e.type_id) == "4" ||parseInt(e.type_id) == "6" ||parseInt(e.type_id) == "7" ;
         });
-
+        console.log('这是narray的值');
         console.log(narray);
-        
+        console.log('这是deviceslist.list的值')
         // 当前array的值为三个对象
         console.log(deviceslist.list)
        

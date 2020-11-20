@@ -1,5 +1,7 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 var common = require("/NotificationCen");
 var deviceservice = require("../model/devices");
 var notiservice = require("../model/noti");
@@ -38,19 +40,19 @@ class wsmanager {
         var token = wx.getStorageSync("token");
         console.log("当前的token", token);
         wx.connectSocket({
-            url: "wss://www.sundaytek.com/wss",
-            header: {
-                "content-type": "application/json",
-            },
-            success() {
-                getApp().globalData.isconnected = true;
-                console.log("链接成功");
-            },
-            fail() {
-                getApp().globalData.isconnected = false;
-                console.log("链接失败");
-            }
-        }),
+                url: "wss://www.sundaytek.com/wss",
+                header: {
+                    "content-type": "application/json",
+                },
+                success() {
+                    getApp().globalData.isconnected = true;
+                    console.log("链接成功");
+                },
+                fail() {
+                    getApp().globalData.isconnected = false;
+                    console.log("链接失败");
+                }
+            }),
             wx.onSocketOpen(() => {
                 wsconnected = true;
                 that.heart();
@@ -69,7 +71,6 @@ class wsmanager {
             //当前datas为所有的设备
             var datas = JSON.parse(res.data);
             console.log('收到服务器响应回的数据', datas);
-            
             let key = datas.key;
             let c = deviceservice.devicesmanager.getInstance();
             switch (key) {
@@ -81,8 +82,7 @@ class wsmanager {
                         case "-1":
                             wx.removeStorage({
                                 key: 'token',
-                                success() {
-                                }
+                                success() {}
                             });
                             wx.reLaunch({
                                 url: "Home",
@@ -179,8 +179,7 @@ class wsmanager {
                     console.log("数据发送失败");
                 }
             });
-        }
-        else {
+        } else {
             console.log("准备不好,不能发数据");
         }
     }

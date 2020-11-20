@@ -23,7 +23,7 @@
 				</button>
         
 			</view>
-      <label style="margin-top: 20rpx;font-size: 8pt;">登录代表您已阅读并同意 圣豆物联协议</label>
+      <label style="margin-top: 20rpx;font-size: 8pt;">登录代表您已阅读并同意 <span bindtap="xieyi">圣豆物联协议</span></label>
 		</view>
 
 		<button form-type="submit" class="subbt" bindtap="">登录</button>

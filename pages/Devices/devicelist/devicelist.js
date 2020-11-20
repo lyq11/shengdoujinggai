@@ -98,7 +98,7 @@ Page({
         //筛选出了所有的井盖子
         var filterlist = type_device_list.filter((e) => {
             // return e.type_id == type_id;
-            return e.type_id == 2 || e.type_id == 3 || e.type_id == 6 || e.type_id == 7;
+            return e.type_id == 2 || e.type_id == 4 || e.type_id == 6 || e.type_id == 7;
         });
         console.log('aa');
         console.log(filterlist);

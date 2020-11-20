@@ -6,6 +6,7 @@ interface share {
   isread: any;
   date: any;
 }
+//分享消息模型
 
 export class sharemanager {
   private static instance = new sharemanager();

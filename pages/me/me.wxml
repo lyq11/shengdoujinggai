@@ -21,7 +21,7 @@
 			</mp-cell>
       <mp-cell link url="../Devices/addDevice/addDevice">
 				<image slot="icon" src="../../img/gerenxinxi.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
-				<view>绑定设备</view>
+				<view>注册设备</view>
 			</mp-cell>
 			<!-- <mp-cell link url="../index">
 				<image slot="icon" src="../../img/bangdingshouji.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
@@ -29,7 +29,8 @@
 			</mp-cell> -->
 			<mp-cell link url="../index">
 				<image slot="icon" src="../../img/iconfontyaoqingzhuce.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
-				<view>分享注册</view>
+				<view>分享软件</view>
+				<button class="contact" open-type="share">透明遮罩层</button>
 			</mp-cell>
 		</mp-cells>
 	</view>

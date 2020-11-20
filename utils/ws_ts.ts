@@ -178,6 +178,7 @@ export class wsmanager {
             that.noti.sendMsg("", "deviceList");
             that.noti.sendMsg("", "devicedetail");
             break;
+            //推送消息
           case "nofity":
             var value = datas.value;
    
@@ -189,6 +190,7 @@ export class wsmanager {
             values["date"] =
               time.toLocaleDateString() + time.toLocaleTimeString();
             values["isread"] = 0;
+            //消息管理器
             var nots = notiservice.notimanager.getInstance();
             nots.add(values);
             nots.show();

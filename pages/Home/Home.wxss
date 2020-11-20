@@ -1,4 +1,4 @@
-page {
+/* page {
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -330,4 +330,252 @@ page {
   height: 60rpx;
   line-height: 60rpx;
   font-size: 35rpx;
+} */
+
+
+
+
+
+
+/* 重新设计的home界面样式表 */
+page {
+  background-color: #252a38;
+  border-top: 1rpx solid #32374c;
+}
+
+/* 设备概览 */
+.overview {
+  width: 240rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  letter-spacing: 10rpx;
+  font-size: 36rpx;
+  color: #fff;
+  padding-left: 30rpx;
+  background-color: #495061;
+  border-radius: 0 50rpx 50rpx 0;
+  margin-top: 15rpx;
+}
+
+/* 上方盒子 */
+.box {
+  background-color: #32374c;
+  width: 700rpx;
+  /* height: 570rpx; */
+  margin: 20rpx auto;
+  box-shadow: 0 0 5px #494f5f;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+
+}
+
+/* 每个小卡片 */
+.item {
+  width: 200rpx;
+  height: 260rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  opacity: .9;
+  margin-top: 20rpx;
+}
+
+.item .count {
+  color: #edf4f6;
+  font-size: 100rpx;
+}
+
+.item image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.item .title {
+  color: #edf4f6;
+}
+
+/* 小卡片背景色 */
+.itemBgc1 {
+  background-color: rgba(235, 97, 0, 1.000);
+}
+
+.itemBgc2 {
+  background-color: rgba(109, 105, 104, 1.000);
+}
+
+.itemBgc3 {
+  background-color: rgba(254, 0, 0, 1.000);
+}
+
+.itemBgc4 {
+  background-color: rgba(17, 150, 219, 1.000);
+}
+
+.itemBgc5 {
+  background-color: rgba(0, 255, 1, 1.000);
+}
+
+.itemBgc6 {
+  background-color: rgba(210, 149, 92, 1.000);
+}
+
+
+
+/* 预警信息 */
+.jindu {
+  position: relative;
+}
+
+.round {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 230rpx;
+  border: 30rpx solid #303646;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+
+
+}
+
+.out {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  position: relative;
+  border: 1px solid #25b798;
+}
+
+.theard {
+  width: 100px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.right {
+  right: 0;
+
+}
+
+.left {
+  left: 0;
+}
+
+.progess {
+  width: 160px;
+  height: 160px;
+  border: 20px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  transform: rotate(45deg);
+
+}
+
+.rightCycle {
+  border-top: 20px solid green;
+  border-right: 20px solid green;
+  right: 0;
+  animation: ProgressLoad_right 5s linear infinite;
+}
+
+@keyframes ProgressLoad_right {
+  0% {
+    transform: rotate(45deg);
+  }
+  50%,
+  100% {
+    transform: rotate(225deg);
+  }
+}
+
+.leftCycle {
+  border-left: 20px solid green;
+  border-bottom: 20px solid green;
+  left: 0;
+  animation: ProgressLoad_left 5s linear infinite;
+}
+
+@keyframes ProgressLoad_left {
+  0%,50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(225deg);
+  }
+}
+
+/* .in{
+  width: 300rpx;
+  height: 300rpx;
+  background-color: #fff;
+  border-radius: 150rpx;
+  color:  #25b798;
+} */
+
+
+
+/**app.wxss**/
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+ 
+
+
+/* 快捷功能 */
+.quick {
+  width: 600rpx;
+  background-color: #2a2c3e;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  padding: 20rpx 0;
+  box-shadow: 0 0 5px #494f5f;
+}
+
+.quickItem {
+  width: 130rpx;
+  height: 130rpx;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30rpx;
+  color: #fff;
+  letter-spacing: 5rpx;
+}
+
+.quick image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.quickBgc1 {
+  background-color: #27b698;
+}
+
+.quickBgc2 {
+  background-color: #d62445;
+}
+
+.quickBgc3 {
+  background-color: #f9a308;
 }

@@ -22,4 +22,4 @@
   <view class="upText">上传井盖图片，使更容易辨别</view>
 </view>
 
-<view class="registerButton">注册井盖</view>
+<view class="registerButton" bindtap="registerDevice">注册井盖</view>

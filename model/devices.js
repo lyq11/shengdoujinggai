@@ -7,6 +7,7 @@ class devicesmanager {
         this.list = [];
     }
     static getInstance() {
+        console.log('这是devicesmanagerinstance');
         console.log(devicesmanager.instance);
     
     

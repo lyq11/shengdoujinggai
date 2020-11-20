@@ -1,10 +1,10 @@
 <!-- Home.wxml -->
-<view class='carousel'>
+<!-- <view class='carousel'>
   <wxs src="../../utils/state.wxs" module="state" />
-  <!-- <view class="search" bindtap="searchBind">
-    <input type="text" placeholder="输入要搜索的设备名称" confirm-type="search" />
-  </view> -->
   <view class="sam iconfont icon-jiankongshuju"> 设备概览</view>
+
+
+
   <view style="" class="recordItem">
     <view class="up_line">
 
@@ -49,43 +49,143 @@
       </view>
     </view>
   </view>
-</view>
-<view>
-  <view class="list">
-    <view class='list-half'>
-      <block wx:if="{{warninglist.length != 0}}">
-        <view wx:for="{{warninglist}}" data-deviceid="{{item.device_uni_id}}" wx:key="index" class='card' bindtap="gotodetail">
-          <view class="color-tag" style="height: 20rpx;background: rgba(255, 25, 38, 1.000)"></view>
-          <view class="card-line-1">
-            <label class="card-line-title">{{item.name}}</label>
-            <label class="card-line-online" style="{{state.onlineinput(item.device_isonline).style}}">{{state.onlineinput(item.device_isonline).name}}</label>
-            <label class="card-line-online" style="{{state.stateinput(item.warning_status).style}}">{{state.stateinput(item.warning_status).name}}</label>
-          </view>
-          <view class="card-line-2">
-            <label>{{CompanyType[item.co_id].name }}</label>
-          </view>
-          <view class="card-line-3">
-            <image class="CoverImg" src="http://www.sundaytek.com/img/smart.png" mode="widthFix"></image>
-            <view class="card-text-su">
-              <label>高度</label>
-              <label>{{item.facevalue}}</label>
+</view> -->
+
+<view class="app">
+  <!-- 设备概览 -->
+  <view class="overview">设备概览</view>
+  <view class="box">
+    <!-- 每个小卡片 -->
+    <view class="item itemBgc1" data-sel="1" bind:tap="gotolist">
+      <view class="count">{{lowpower_count}}</view>
+      <image src="../../image/dc.png" alt="" />
+      <view class="title">电量低设备</view>
+    </view>
+
+    <view class="item itemBgc2" data-sel="2" bind:tap="gotolist">
+      <view class="count">{{offline_count}}</view>
+      <image src="../../image/lx.png" alt="" />
+      <view class="title">离线设备</view>
+    </view>
+    <view class="item itemBgc3" data-sel="3" bind:tap="gotolist">
+      <view class="count">{{warning_count}}</view>
+      <image src="../../image/yj.png" alt="" />
+      <view class="title">预警设备</view>
+    </view>
+    <view class="item itemBgc4" data-sel="4" bind:tap="gotolist">
+      <view class="count">{{sleep_count}}</view>
+      <image src="../../image/xm.png" alt="" />
+      <view class="title">休眠设备</view>
+    </view>
+    <view class="item itemBgc5" data-sel="5" bind:tap="gotolist">
+      <view class="count">{{online_count}}</view>
+      <image src="../../image/zx.png" alt="" />
+      <view class="title">在线设备</view>
+    </view>
+    <view class="item itemBgc6" data-sel="6" bind:tap="gotolist">
+      <view class="count">{{fix_count}}</view>
+      <image src="../../image/wh.png" alt="" />
+      <view class="title">维保设备</view>
+    </view>
+    <!-- <view class="item itemBgc7">
+      <view class="count">{{lowpower_count}}</view>
+      <image src="../../img/share_icon.png" alt="" />
+      <view class="title">搜索</view>
+    </view>
+    <view class="item itemBgc8">
+      <view class="count">{{lowpower_count}}</view>
+      <image src="../../img/share_icon.png" alt="" />
+      <view class="title">注册</view>
+    </view>
+    <view class="item itemBgc9">
+      <view class="count">{{lowpower_count}}</view>
+      <image src="../../img/share_icon.png" alt="" />
+      <view class="title">用户</view>
+    </view> -->
+
+
+
+  </view>
+
+  <!-- 预警情况 -->
+  <view class="overview">预警情况 {{percent}}</view>
+  <!-- <view>
+    <view class="list">
+      <view class='list-half'>
+        <block wx:if="{{warninglist.length != 0}}">
+          <view wx:for="{{warninglist}}" data-deviceid="{{item.device_uni_id}}" wx:key="index" class='card'
+            bindtap="gotodetail">
+            <view class="color-tag" style="height: 20rpx;background: rgba(255, 25, 38, 1.000)"></view>
+            <view class="card-line-1">
+              <label class="card-line-title">{{item.name}}</label>
+              <label class="card-line-online"
+                style="{{state.onlineinput(item.device_isonline).style}}">{{state.onlineinput(item.device_isonline).name}}</label>
+              <label class="card-line-online"
+                style="{{state.stateinput(item.warning_status).style}}">{{state.stateinput(item.warning_status).name}}</label>
+            </view>
+            <view class="card-line-2">
+              <label>{{CompanyType[item.co_id].name }}</label>
+            </view>
+            <view class="card-line-3">
+              <image class="CoverImg" src="http://www.sundaytek.com/img/smart.png" mode="widthFix"></image>
+              <view class="card-text-su">
+                <label>高度</label>
+                <label>{{item.facevalue}}</label>
+              </view>
             </view>
           </view>
-        </view>
-      </block>
-      <block wx:if="{{warninglist.length == 0}}">
-        <view class="safe">
-          <view>当前没有设备出现预警</view>
-        </view>
-      </block>
+        </block>
+        <block wx:if="{{warninglist.length == 0}}">
+          <view class="safe">
+            <view>当前没有设备出现预警</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view> -->
 
-
+  <view class="jindu">
+    <view class="round">
+      <view class="out">
+        <view class="theard left">
+          <view class="progess leftCycle" style="transform:rotate(45deg)"></view>
+        </view>
+        <view class="theard right">
+          <view class="progess rightCycle" style="transform:rotate(45deg)"></view>
+        </view>
+      </view>
     </view>
   </view>
+  
+
+  <!-- 快捷功能 -->
+  <view class="overview">快捷功能</view>
+  <view class="quick">
+    <view class="quickItem quickBgc1" bindtap="searchBind">
+      <image src="../../image/ss.png"></image>
+      <view class="">搜索</view>
+    </view>
+
+    <view class="quickItem quickBgc2" bindtap="registerDevice">
+      <image src="../../image/bjb.png"></image>
+      <view class="">注册</view>
+    </view>
+
+    <view class="quickItem quickBgc3" bind:tap="gotolist">
+      <image src="../../image/yh.png"></image>
+      <view class="">用户</view>
+    </view>
+  </view>
+
 </view>
 
-<view class="up_line">
-     <!-- 搜索 -->
+
+
+
+
+
+<!-- <view class="up_line">
+    
       <view class="vv v_1"  bindtap="searchBind">
         <view class="v_co ">
           <label class="v_text iconfont icon-search " style="color:rgba(34, 173, 56, 1.000)"></label>
@@ -104,4 +204,4 @@
         </view>
         <view class="v_title v_tit_h" style="background:rgba(17, 150, 180, 1.000)"><view ></view>用户</view>
       </view>
-    </view>
+</view> -->

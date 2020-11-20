@@ -50,9 +50,10 @@ Page({
               success(res) {
                 if (res.confirm) {
                   console.log("用户点击确定");
-                  wx.navigateBack();
+                  ws.start();
                   ws.send("update");
-                }du
+                  wx.navigateBack();
+                }
               }
             });
             break;
