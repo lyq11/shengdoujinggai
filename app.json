@@ -1,6 +1,5 @@
 {
   "pages": [
-
     "pages/Home/Home",
     "pages/me/me",
     "pages/index/index",
@@ -20,10 +19,8 @@
     "pages/Map/map",
     "pages/me/aboutus/aboutus",
     "pages/Home/search/search",
-    "pages/Home/registerDevice/registerDevice",
     "pages/Devices/deviceDetail/qqNavigation/qqNavigation",
     "pages/me/usCenten/usCenten"
-
 
   ],
   "window": {

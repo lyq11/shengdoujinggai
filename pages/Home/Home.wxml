@@ -108,7 +108,7 @@
   </view>
 
   <!-- 预警情况 -->
-  <view class="overview">预警情况 {{percent}}</view>
+  <view class="overview">预警情况</view>
   <!-- <view>
     <view class="list">
       <view class='list-half'>
@@ -144,7 +144,7 @@
     </view>
   </view> -->
 
-  <view class="jindu">
+  <!-- <view class="jindu">
     <view class="round">
       <view class="out">
         <view class="theard left">
@@ -155,8 +155,15 @@
         </view>
       </view>
     </view>
+  </view> -->
+
+  <!-- 预警情况echarts -->
+  <view class="echarts" >
+    <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ ec }}"></ec-canvas>
   </view>
-  
+
+
+
 
   <!-- 快捷功能 -->
   <view class="overview">快捷功能</view>
@@ -176,7 +183,7 @@
       <view class="">用户</view>
     </view>
   </view>
-
+<view class="bot"></view>
 </view>
 
 

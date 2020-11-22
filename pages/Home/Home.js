@@ -1,7 +1,110 @@
 // miniprogram/pages/Home.js
+
 var common = require("../../utils/NotificationCen");
 var wsser = require("../../utils/ws_ts");
 var deviceslist = require("../../model/devices").devicesmanager.getInstance();
+
+//设置echarts预警数值
+var warningCountPercent = 90;
+var warningCount=8;
+
+import * as echarts from '../../ec-canvas/echarts';
+
+//echart初始化
+function initChart(canvas, width, height, dpr) {
+  const chart = echarts.init(canvas, null, {
+    width: width,
+    height: height,
+    devicePixelRatio: dpr // new
+  });
+  canvas.setChart(chart);
+
+  //option指定图标的配置项和数据
+  var option = {
+    backgroundColor: "#343a4d",
+    //默认全局文本样式
+    textStyle: {
+      fontSize: 14,
+      color: '#ffffff' // 主标题文字颜色
+    },
+    color: ["#37A2DA", "#32C5E9", "#67E0E3"],
+    //这是一个系列series  可以声明多个系列在一个echarts中
+    series: [{
+      name: '预警情况',
+      //这是图标类型 现在是仪表盘
+      type: 'gauge',
+      radius: "90%",
+      //最下方数值的设置
+      detail: {
+        formatter: '{value}%\n'+"("+warningCount+"台)"
+      },
+      //坐标轴线
+      axisLine: {
+        show: true,
+        //控制线条样式
+        lineStyle: {
+          //线条宽度
+          width: 20,
+          //暗影模糊
+          shadowBlur: 0,
+          //仪表盘颜色
+          color: [
+            [0.2, '#54b062'],
+            [0.4, '#4da187'],
+            [0.6, '#4081bb'],
+            [0.8, '#ee9d1e'],
+            [1, '#e74c3d']
+          ]
+        }
+      },
+      //仪表盘的值
+      data: [{
+        value: warningCountPercent,
+        name: '异常数量'
+      }],
+      //刻度的值 如果不需要就设置为none
+      // splitNumber:'none',
+
+      //设置指针 
+      // pointer:{
+      //   show:true,
+      //   width:50,
+      //   length:'10%',
+      // },
+
+      //分割线
+      splitLine: {
+        show: true,
+        length: '20',
+        //控制分割线的样式
+        //  lineStyle:{
+        //   color:'#ff0000',
+        //   width:5,
+        //   type:'solid'
+        //  }
+      },
+
+      //标题 当前标题为异常数量
+      title: {
+        show: true,
+        textStyle: {
+          color: "#fff",
+          fontSize: 18
+        },
+      },
+     
+
+
+
+    }]
+  };
+
+  chart.setOption(option, true);
+
+  return chart;
+}
+
+
 
 var app = getApp();
 let ws = wsser.wsmanager.getInstance();
@@ -24,32 +127,40 @@ Page({
     Locklist: [],
     listData: [],
     currentIndex: 0,
-    carouselList: [
-      {
-        id: "101",
-        img: "http://www.sundaytek.com/sd.jpg",
-        title: "",
-        url: "https://www.sundaytek.com/",
-      },
-    ],
+    carouselList: [{
+      id: "101",
+      img: "http://www.sundaytek.com/sd.jpg",
+      title: "",
+      url: "https://www.sundaytek.com/",
+    }, ],
     //百分比
-    percent:''
-   
+    ec: {
+      onInit: initChart
+    }
+
   },
 
+  onShareAppMessage: function (res) {
+    return {
+      title: 'ECharts 可以在微信小程序中使用啦！',
+      path: '/pages/index/index',
+      success: function () {},
+      fail: function () {}
+    }
+  },
 
-   //跳转到搜索界面
-   searchBind:function(){
-    wx.navigateTo({  
-      url: './search/search',  
-    }) 
+  //跳转到搜索界面
+  searchBind: function () {
+    wx.navigateTo({
+      url: './search/search',
+    })
   },
 
   //跳转到注册界面
-  registerDevice:function(){
-    wx.navigateTo({  
-      url: '../Devices/addDevice/addDevice',  
-    }) 
+  registerDevice: function () {
+    wx.navigateTo({
+      url: '../Devices/addDevice/addDevice',
+    })
     // ws.send("update");
   },
 
@@ -58,12 +169,13 @@ Page({
    */
   onLoad: function (options) {
 
-  //预警状态假信息
-  //  共有30台设备，2台出现问题
-  var total=30,errNum=2;
-    var percent=Math.round(errNum/total*10000)/100+"%";
+    //预警状态假信息
+    //  共有30台设备，2台出现问题
+    var total = 30,
+      errNum = 2;
+    var percent = Math.round(errNum / total * 10000) / 100 + "%";
     this.setData({
-      percent:percent
+      percent: percent
     })
 
 
@@ -78,7 +190,7 @@ Page({
       });
     } else {
       console.log('我的token不为空');
-      
+
       //链接服务器
       ws.start();
       wx.showLoading({
@@ -92,7 +204,7 @@ Page({
       let inits = common.wsmanager.getInstance(); //消息中心的单例  
       console.log('我在这里，这是inits的值');
       console.log(inits);
-      
+
       //消息中心单例调用eguser(name, callb)方法返回了一个user
       //将当前页面的data数据作为回调函数参数
 
@@ -124,14 +236,14 @@ Page({
         //筛选
         var narray = array.filter((e) => {
           //筛选出type_id==2的设备，井盖设备
-          return parseInt(e.type_id) == "2" || parseInt(e.type_id) == "4" ||parseInt(e.type_id) == "6" ||parseInt(e.type_id) == "7" ;
+          return parseInt(e.type_id) == "2" || parseInt(e.type_id) == "4" || parseInt(e.type_id) == "6" || parseInt(e.type_id) == "7";
         });
         console.log('这是narray的值');
         console.log(narray);
         console.log('这是deviceslist.list的值')
         // 当前array的值为三个对象
         console.log(deviceslist.list)
-       
+
         //过滤器
         var lowpower_a = narray.filter((e) => {
           //返回电量小于500的设备
@@ -196,9 +308,9 @@ Page({
         var userinfo = app.globalData.UserInfos;
         //将用户姓名存入缓存数据
         wx.setStorageSync('userName', userinfo.Home_title);
-       var storageUserName =  wx.getStorageSync('userName')
+        var storageUserName = wx.getStorageSync('userName')
         wx.setNavigationBarTitle({
-          title:storageUserName,
+          title: storageUserName,
         });
         var sd = wx.getStorageSync("CompanyType");
 
@@ -277,28 +389,28 @@ Page({
     switch (e.currentTarget.dataset.sel) {
       //电量低设备
       case "1":
-        app.globalData.FilterData = [0,3,0]
-        console.log("set",app.globalData.FilterData)
+        app.globalData.FilterData = [0, 3, 0]
+        console.log("set", app.globalData.FilterData)
         break;
-      //离线设备
+        //离线设备
       case "2":
-        app.globalData.FilterData = [2,0,0]
+        app.globalData.FilterData = [2, 0, 0]
         break;
-      //预警设备
+        //预警设备
       case "3":
-        app.globalData.FilterData = [0,2,0]
+        app.globalData.FilterData = [0, 2, 0]
         break;
-      //休眠设备
+        //休眠设备
       case "4":
-        app.globalData.FilterData = [3,0,0]
+        app.globalData.FilterData = [3, 0, 0]
         break;
-      //在线设备
+        //在线设备
       case "5":
-        app.globalData.FilterData = [1,0,0]
+        app.globalData.FilterData = [1, 0, 0]
         break;
-      //维护设备
+        //维护设备
       case "6":
-        app.globalData.FilterData = [0,1,0]
+        app.globalData.FilterData = [0, 1, 0]
         break;
     }
     wx.switchTab({
@@ -306,12 +418,12 @@ Page({
       url: "../Devices/devicelist/devicelist",
       success: function (res) {
         //跳转成功 打印出    
-        console.log("sucees",app.globalData.FilterData)
+        console.log("sucees", app.globalData.FilterData)
         // success
       },
       fail: function (e) {
         //失败
-        console.log("error",e)
+        console.log("error", e)
       },
       complete: function () {
         // complete

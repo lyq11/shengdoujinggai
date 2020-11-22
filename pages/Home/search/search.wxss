@@ -1,22 +1,66 @@
 /* pages/Home/search/search.wxss */
-page{
-  background-color: #fff;
+page {
+  background-color: #252a38;
 }
-.search{
+
+.overview {
+  width: 240rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  letter-spacing: 10rpx;
+  font-size: 36rpx;
+  color: #fff;
+  padding-left: 30rpx;
+  background-color: #495061;
+  border-radius: 0 50rpx 50rpx 0;
+  margin-top: 15rpx;
+}
+
+/* 搜索框区域样式 */
+.serarch {
+  height: 150rpx;
+  background-color: #252a38;
   width: 100%;
+  margin: 0 auto;
+  line-height: 150rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #000;
+}
+
+.searchInp {
   height: 80rpx;
-  line-height: 80rpx;
-  background-color: #1296db;
+  width: 85%;
+  border-radius: 50rpx;
+  background-color: #2f3142;
+  margin: 0 auto;
+  box-shadow: 0 0 5px #494f5f;
+  padding-left: 30rpx;
+  color: #ccc;
+  letter-spacing: 5rpx;
+}
+.searchText{
+  position: absolute;
+  right: 9%;
+  top: 44rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 60rpx;
+  height: 60rpx;
   overflow: hidden;
 }
-.tex{
-  color: #fff;
+.searchText image{
+  width: 40rpx;
+  height: 40rpx;
   position: relative;
-  top: -153rpx;
-  right: -643rpx;
-  font-size: 40rpx;
+  left: 9rpx;
+  top: -32rpx;
 }
-.isonline{
+
+
+
+.isonline {
   position: absolute;
   top: 70rpx;
   left: 555rpx;
@@ -30,72 +74,60 @@ page{
 }
 
 /* 在线 */
-.online{
+.online {
   border: 2rpx solid rgb(0, 255, 1);
   color: rgb(0, 255, 1);
 }
+
 /* 离线 */
-.noline{
-  border: 2rpx solid  rgb(109, 105, 104);
+.noline {
+  border: 2rpx solid rgb(109, 105, 104);
   color: rgb(109, 105, 104);
 }
+
 /* 休眠 */
-.sleep{
+.sleep {
   border: 2rpx solid rgb(17, 150, 219);
   color: rgb(17, 150, 219);
 }
+
 /* 隐藏 */
-.hid{
+.hid {
   display: none;
 }
 
-.searchInp{
-  width: 500rpx;
-  font-size: 35rpx;
-  margin:0 auto;
-  height: 60rpx;
-  margin-top: 10rpx;
-  margin-left: 50rpx;
-  border-radius: 15rpx;
-  padding-left: 60rpx;
-  background-color: #fff;
-}
-.inputImg{
-  width: 40rpx;
-  height: 40rpx;
-  position: relative;
-  left: 58rpx;
-  top: -60rpx;
-}
-.tue,.card{
+.tue,
+.card {
   display: flex;
   flex-direction: row;
 }
-.tue{
+
+.tue {
   margin-top: 10rpx;
 }
-.tueL{
+
+.tueL {
   margin-left: 50rpx;
 }
-.card{
-  color: rgb(151, 151,151);
+
+.card {
+  color: #fff;
   height: 200rpx;
-  background-color: #fff;
-  border-bottom:2rpx solid #000;
-  margin-top: 10rpx;
+  background-color: #292d3e;
+  border: 2rpx solid #000;
+  margin-top: 20rpx;
   padding-left: 20rpx;
   position: relative;
+  border-radius: 0 95rpx 95rpx 0;
+  width: 700rpx;
+  border-left: 0;
 }
-.itemName{
+.card:nth-child(1){
+  margin-top: 10rpx;
+}
+
+.itemName {
   font-size: 40rpx;
-  color: #000;
   margin-top: 20rpx;
 }
-.detail{
-  height: 200rpx;
-  line-height: 200rpx;
-  font-size: 40rpx;
-  position: absolute;
-  right: 50rpx;
-  top: 0rpx;
-}
+

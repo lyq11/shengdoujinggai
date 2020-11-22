@@ -10,9 +10,9 @@ Page({
     // 设备列表
     deviceslist: [],
     // 查询结果
-    searchResult:[],
+    searchResult:[]
     // 标签
-    flag:false
+    // flag:false
   },
    //点击卡片事件
    jumpto: function (e) {

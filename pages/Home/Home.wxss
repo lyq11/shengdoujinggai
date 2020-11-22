@@ -425,100 +425,19 @@ page {
 
 
 /* 预警信息 */
-.jindu {
-  position: relative;
-}
-
-.round {
-  width: 400rpx;
-  height: 400rpx;
-  border-radius: 230rpx;
-  border: 30rpx solid #303646;
+.echarts{
+  width:600rpx;
+  height: 600rpx;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   margin: 0 auto;
-
-
+  margin-top: 10rpx;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
 }
 
-.out {
-  width: 200px;
-  height: 200px;
-  margin: 50px auto;
-  position: relative;
-  border: 1px solid #25b798;
-}
 
-.theard {
-  width: 100px;
-  height: 200px;
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-}
-
-.right {
-  right: 0;
-
-}
-
-.left {
-  left: 0;
-}
-
-.progess {
-  width: 160px;
-  height: 160px;
-  border: 20px solid transparent;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  transform: rotate(45deg);
-
-}
-
-.rightCycle {
-  border-top: 20px solid green;
-  border-right: 20px solid green;
-  right: 0;
-  animation: ProgressLoad_right 5s linear infinite;
-}
-
-@keyframes ProgressLoad_right {
-  0% {
-    transform: rotate(45deg);
-  }
-  50%,
-  100% {
-    transform: rotate(225deg);
-  }
-}
-
-.leftCycle {
-  border-left: 20px solid green;
-  border-bottom: 20px solid green;
-  left: 0;
-  animation: ProgressLoad_left 5s linear infinite;
-}
-
-@keyframes ProgressLoad_left {
-  0%,50% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(225deg);
-  }
-}
-
-/* .in{
-  width: 300rpx;
-  height: 300rpx;
-  background-color: #fff;
-  border-radius: 150rpx;
-  color:  #25b798;
-} */
 
 
 
@@ -578,4 +497,9 @@ page {
 
 .quickBgc3 {
   background-color: #f9a308;
+}
+
+
+.bot{
+  height: 30rpx;
 }

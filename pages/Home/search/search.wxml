@@ -2,16 +2,28 @@
 <wxs src="../../../utils/state.wxs" module="state" />
 
 
-<view class="search">
+<!-- <view class="search">
   <input value="" type="text" placeholder="输入设备名称或ID来查找设备" confirm-type="search" focus="true" bindinput="search"
     class="searchInp" />
   <image src="../../../img/input.png" class="inputImg"></image>
   <view class="tex">搜索</view>
+</view> -->
+
+
+<!-- 顶部搜索框区域 -->
+<view class="overview">搜索设备</view>
+<view class="serarch">
+    <input type="text" value="" placeholder="请输入设备名称或ID" confirm-type="search" bindinput="search" class="searchInp" />
+    <view class="searchText">
+      <image src="../../../image/main.png"></image>
+    </view>
 </view>
 
 
 
+
 <!-- 搜索结果区域 -->
+<view class="overview">搜索结果</view>
 <view wx:for="{{searchResult}}" wx:key="index" class="card" bindtap="jumpto" data-typeid="{{ item.id }}"
     data-name="{{ item.name }}">
   <view>
@@ -22,16 +34,16 @@
       <view class="tueL">纬度：{{item.device.device_longitute}}</view>
     </view>
   </view>
-  <view class="detail">></view>
+  
   <view class="{{item.device_isonline== 1 ? 'online' : 'hid'}} isonline">在线</view>
   <view class="{{item.device_isonline== 0 ? 'noline' : 'hid'}} isonline">离线</view>
   <view class="{{item.device_isonline== 2 ? 'sleep' : 'hid'}} isonline">休眠</view>
 </view>
 
 
-
+<!-- 
 <view wx:if="{{flag}}">
 </view>
 <view wx:else>
   当前没有搜索结果，请确认输入设备名称是否正确
-</view>
+</view> -->
