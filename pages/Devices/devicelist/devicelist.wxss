@@ -37,7 +37,7 @@ Page {
 
 /*一级菜单*/
 .menu {
-	background-color: #1296db;
+	background-color: #252a38;
 	text-align: center;
 	display: flex;
 	flex-direction: row;
@@ -45,19 +45,26 @@ Page {
 }
 
 .menu dt {
-	font-size: 15px;
+	font-size: 16px;
 	float: left;
 	/*hack*/
-	width: 220rpx;
-	height: 72rpx;
-	border-right: 1rpx solid #ccc;
-	border-bottom: 1px solid #ccc;
+	width: 283rpx;
+	height: 90rpx;
 	text-align: center;
 	color: black;
-	line-height: 72rpx;
+	line-height: 90rpx;
 	z-index: 2;
 	position: relative;
+	border-bottom: 1px solid #ccc;
+	/* transition: all 0.2s; */
 }
+
+
+/* .menu dt:hover{
+	color: #fff;
+	background-color: #000;
+} */
+
 
 .menu dt:nth-child(5) {
 	border-right: 0;
@@ -201,5 +208,4 @@ Page {
 
 .tabTitle {
 	background-color: #fff;
-	border-radius: 100rpx;
 }

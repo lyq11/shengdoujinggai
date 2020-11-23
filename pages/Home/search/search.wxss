@@ -54,8 +54,8 @@ page {
   width: 40rpx;
   height: 40rpx;
   position: relative;
-  left: 9rpx;
-  top: -32rpx;
+  left: 12rpx;
+  top: -34rpx;
 }
 
 

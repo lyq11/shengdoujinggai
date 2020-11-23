@@ -109,7 +109,7 @@
 
   <!-- 预警情况 -->
   <view class="overview">预警情况</view>
-  <!-- <view>
+  <view>
     <view class="list">
       <view class='list-half'>
         <block wx:if="{{warninglist.length != 0}}">
@@ -142,7 +142,7 @@
         </block>
       </view>
     </view>
-  </view> -->
+  </view>
 
   <!-- <view class="jindu">
     <view class="round">
@@ -158,9 +158,9 @@
   </view> -->
 
   <!-- 预警情况echarts -->
-  <view class="echarts" >
+  <!-- <view class="echarts" >
     <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ ec }}"></ec-canvas>
-  </view>
+  </view> -->
 
 
 

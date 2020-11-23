@@ -15,7 +15,7 @@
 <view class="serarch">
     <input type="text" value="" placeholder="请输入设备名称或ID" confirm-type="search" bindinput="search" class="searchInp" />
     <view class="searchText">
-      <image src="../../../image/main.png"></image>
+      <image src="../../../img/inp.png"></image>
     </view>
 </view>
 

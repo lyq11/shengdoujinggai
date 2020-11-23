@@ -1,5 +1,4 @@
-/* miniprogram/pages/Devices/addDevice/addDevice.wxss */
-page{
+/* page{
   background-color: #fff;
 }
 .input-buti{
@@ -16,4 +15,66 @@ page{
   background: rgb(243, 243, 243) !important;
   border-top: 1rpx solid rgba(58, 58, 61, 1.000);
 
+} */
+
+
+
+page{
+  background-color: #252a38;
+  border-top: 1rpx solid #32374c;
+  height: 100%;
 }
+.box{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.lineM{
+  width: 1000rpx;
+  height: 400rpx;
+  background-color: #25b798;
+  transform: rotate(150deg) translate(87rpx,246rpx);
+}
+.lineN{
+  width: 1300rpx;
+  height: 400rpx;
+  background-color: #edf3f8;
+  transform: rotate(150deg) translate(300rpx,-115rpx);
+}
+.icon{
+  position: absolute;
+  left: 0rpx;
+  top: 141rpx;
+  height: 296rpx;
+  width: 100%;
+  /* border-bottom: 10rpx solid #d42549; */
+  text-align: center;
+}
+
+.icon image{
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.icon .text{
+  color: #fff;
+  letter-spacing: 20rpx;
+  font-size: 40rpx;
+  text-align: center;
+  padding-left: 20rpx;
+}
+
+/* 输入框样式表 */
+.regpage{
+  position: absolute;
+  width: 100%;
+  top: 380rpx;
+}
+input{
+  padding-left: 20rpx;
+}
+

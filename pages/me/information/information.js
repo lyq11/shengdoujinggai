@@ -27,7 +27,9 @@ Page({
     var array = [];
     var NotiType = wx.getStorageSync("NotiType");
     var lista = notiservice.list;
-    console.log("deviceslist" + lista);
+    console.log("deviceslist");
+    console.log(lista);
+    
     for (var a in NotiType) {
       console.log(NotiType[a]);
       array.push(NotiType[a]);
